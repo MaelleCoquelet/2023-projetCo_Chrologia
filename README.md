@@ -1,6 +1,8 @@
 # 2023-projetCo_Chrologia
 
-This template should help get you started developing with Vue 3 in Vite.
+Groupe 5 : Anis Amrouche, Viktor Ghirardelli, Maëlle Coquelet
+
+Lien de l'application : 
 
 ## Recommended IDE Setup
 
