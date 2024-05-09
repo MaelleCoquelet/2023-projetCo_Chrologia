@@ -8,9 +8,9 @@ import IconSearch from './icons/IconSearch.vue';
 
 </script>
 <template>
-    <footer>
-        <ul class=" bg-slate-900 flex " >
-            <div class="flex" >
+    <footer class="relative" >
+        <ul class=" bg-slate-900 flex px-8 py-4 justify-between">
+            <div class="footer-items">
                 <li>
                     <RouterLink to="/">
                         <IconBell />
@@ -22,14 +22,14 @@ import IconSearch from './icons/IconSearch.vue';
                     </RouterLink>
                 </li>
             </div>
-            <div>
+            <div class="bg-red-200 p-2 rounded-full absolute -top-1/3 translate-x-full">
                 <li>
                     <RouterLink to="/">
                         <IconPlus />
                     </RouterLink>
                 </li>
             </div>
-            <div class="flex" >
+            <div class="footer-items">
                 <li>
                     <RouterLink to="/">
                         <IconLetter />

@@ -20,3 +20,8 @@
     }
 
 }
+@layer components {
+    .footer-items {
+        @apply flex gap-12 align-middle items-center;
+    }
+}
