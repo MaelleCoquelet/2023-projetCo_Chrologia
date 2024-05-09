@@ -9,8 +9,8 @@ import IconSearch from './icons/IconSearch.vue';
 </script>
 <template>
     <footer>
-        <ul>
-            <div>
+        <ul class=" bg-slate-900 flex " >
+            <div class="flex" >
                 <li>
                     <RouterLink to="/">
                         <IconBell />
@@ -29,7 +29,7 @@ import IconSearch from './icons/IconSearch.vue';
                     </RouterLink>
                 </li>
             </div>
-            <div>
+            <div class="flex" >
                 <li>
                     <RouterLink to="/">
                         <IconLetter />
