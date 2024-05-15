@@ -24,7 +24,7 @@ import IconSearch from './icons/IconSearch.vue';
                     </li>
                 </div>
                 <div class=" -translate-y-8 ">
-                    <li class="bg-red-200 p-2 rounded-full">
+                    <li class="bg-orpink-200 p-2 rounded-full">
                         <RouterLink to="/">
                             <IconPlus />
                         </RouterLink>

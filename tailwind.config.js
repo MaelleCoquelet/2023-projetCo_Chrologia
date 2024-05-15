@@ -3,9 +3,16 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Raleway', 'sans-serif'],
+      serif:['OpenSans', 'sans-serif']
     },
-    extend: {}
+    extend: {
+      colors:{
+        orpink:{
+          200: '#F7AF9D',
+        }
+      }
+    }
   },
   plugins: []
 }
