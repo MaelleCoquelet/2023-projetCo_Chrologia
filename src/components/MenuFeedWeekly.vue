@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import IconWeekly from '@/components/icons/IconWeekly.vue';
+import IconWeeklyActive from '@/components/icons/IconWeeklyActive.vue';
 import IconReminder from '@/components/icons/IconReminder.vue';
 </script>
 <template>
@@ -8,12 +8,12 @@ import IconReminder from '@/components/icons/IconReminder.vue';
         <ul class="flex flex-row justify-around">
             <li>
                 <RouterLink to="/" class="menuFeed-items">
-                    <IconWeekly />
+                    <IconWeeklyActive />
                     <p class="text-orpink-200">Weekly</p>
                 </RouterLink>
             </li>
             <li>
-                <RouterLink to="/" class="menuFeed-items">
+                <RouterLink to="/reminder" class="menuFeed-items">
                     <IconReminder />
                     <p>Reminder</p>
                 </RouterLink>

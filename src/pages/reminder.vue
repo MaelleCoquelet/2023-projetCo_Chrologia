@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import MenuFeedWeekly from '@/components/MenuFeedWeekly.vue';
+import MenuFeedReminder from '@/components/MenuFeedReminder.vue'
 </script>
 <template>
- <MenuFeedWeekly />
+    <MenuFeedReminder />
 </template>
