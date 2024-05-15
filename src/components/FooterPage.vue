@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
 import { RouterLink } from 'vue-router';
-import IconBell from './icons/IconBell.vue';
-import IconLetter from './icons/IconLetter.vue';
-import IconPlus from './icons/IconPlus.vue';
-import IconSearch from './icons/IconSearch.vue';
+import IconBell from '@/components/icons/IconBell.vue';
+import IconLetter from '@/components/icons/IconLetter.vue';
+import IconPlus from '@/components/icons/IconPlus.vue';
+import IconSearch from '@/components/icons/IconSearch.vue';
 
 </script>
 <template>
