@@ -8,7 +8,7 @@ import IconSearch from './icons/IconSearch.vue';
 
 </script>
 <template>
-    <footer class="relative">
+    <footer class="fixed z-10 w-full bottom-0">
         <nav>
             <ul class=" bg-slate-900 flex px-8 py-2 justify-between">
                 <div class="footer-items">
