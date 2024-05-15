@@ -1,5 +1,7 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+import MenuFeed from '../components/MenuFeed.vue'
+</script>
 <template>
-  <div class="p-8 text-center">
-    <h1>Page d'accueil</h1>
-  </div>
+ <MenuFeed />
 </template>

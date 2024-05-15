@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-sans text-base leading-normal;
+        @apply font-sans text-base leading-normal bg-slate-700;
     }
 
     h1 {
@@ -19,9 +19,16 @@
         @apply text-sm leading-5 font-bold lg:text-base lg:leading-6 lg:font-bold;
     }
 
+    p{
+        @apply text-stone-100
+    }
+
 }
 @layer components {
     .footer-items {
         @apply flex gap-12 align-middle items-center;
+    }
+    .menuFeed-items{
+        @apply flex flex-row items-center gap-2 p-1
     }
 }
