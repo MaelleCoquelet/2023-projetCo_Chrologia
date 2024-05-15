@@ -19,16 +19,33 @@
         @apply text-sm leading-5 font-bold lg:text-base lg:leading-6 lg:font-bold;
     }
 
-    p{
+    p {
         @apply text-stone-100
     }
 
 }
+
 @layer components {
     .footer-items {
         @apply flex gap-12 align-middle items-center;
     }
-    .menuFeed-items{
-        @apply flex flex-row items-center gap-2 p-1
+
+    .menuFeed-items {
+        @apply flex flex-row items-center gap-2 p-1;
+    }
+
+    .fixed-top {
+        @apply fixed z-10 w-full top-0;
+    }
+
+    .fixed-topNav {
+        @apply mt-[120px] p-1;
+    }
+
+    .icon-fillActive{
+        @apply *:fill-orpink-200;
+    }
+    .icon-strokeActive{
+        @apply *:stroke-orpink-200;
     }
 }
