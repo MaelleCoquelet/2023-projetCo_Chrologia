@@ -4,8 +4,8 @@ import IconWeekly from '@/components/icons/IconWeekly.vue';
 import IconReminderActive from '@/components/icons/IconReminderActive.vue';
 </script>
 <template>
-    <nav class="fixed z-10 w-full top-0">
-        <ul class="flex flex-row justify-around">
+    <nav class="fixed-top fixed-topNav">
+        <ul class="flex justify-around">
             <li>
                 <RouterLink to="/" class="menuFeed-items">
                     <IconWeekly />
@@ -19,5 +19,5 @@ import IconReminderActive from '@/components/icons/IconReminderActive.vue';
                 </RouterLink>
             </li>
         </ul>
-        </nav>
+    </nav>
 </template>
