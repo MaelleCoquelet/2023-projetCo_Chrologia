@@ -7,7 +7,7 @@ import IconReminderActive from '@/components/icons/IconReminderActive.vue';
     <nav class="fixed-top fixed-topNav">
         <ul class="flex justify-around">
             <li>
-                <RouterLink to="/" class="menuFeed-items">
+                <RouterLink to="/weekly" class="menuFeed-items">
                     <IconWeekly />
                     <p>Weekly</p>
                 </RouterLink>

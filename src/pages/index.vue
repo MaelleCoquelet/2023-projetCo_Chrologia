@@ -1,7 +1,42 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import MenuFeedWeekly from '@/components/MenuFeedWeekly.vue';
 </script>
 <template>
- <MenuFeedWeekly />
+    <div class="flex flex-col gap-16">
+        <div class="flex flex-col gap-6 justify-center items-center px-8">
+            <h1 class="text-orpink-200">Connexion</h1>
+            <p class="text-sm">Veuillez vous connecter à Chrologia pour accéder au contenu de notre site</p>
+        </div>
+        <form action="/">
+            <fieldset class="flex flex-col gap-6 px-4">
+                <div class="flex flex-col gap-3">
+                    <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail ou num téléphone *</label>
+                    <input
+                        class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
+                        id="email" type="email" name="email" required placeholder="Ex. azerty@gmail.com">
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe *</label>
+                    <input
+                        class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
+                        id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
+                        placeholder="Ex. Mot_de_passe">
+                </div>
+            </fieldset>
+        </form>
+        <div class="flex flex-col px-8 gap-6">
+            <div class="flex flex-col gap-3 justify-center items-center">
+                <button> <!-- A remplacer par un composant button -->
+                    Se connecter
+                </button>
+                <p>ou</p>
+                <p>A REMPLACER</p> <!-- A remplacer par le composant de l'api Google -->
+            </div>
+            <RouterLink to="#" class="text-orpink-200 underline">Mot de passe oublié ?</RouterLink>
+            <div class="flex gap-2 text-sm font-bold">
+                <p>Vous n'avez pas de compte ?</p>
+                <RouterLink to="#" class="text-orpink-200">Inscrivez vous</RouterLink>
+            </div>
+        </div>
+    </div>
 </template>
