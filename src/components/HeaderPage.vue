@@ -13,7 +13,7 @@ function disableSetting() {
 </script>
 
 <template>
-  <header class="fixed-top py-6">
+  <header class="fixed z-10 w-full top-0 py-6 bg-slate-700">
     <nav class="flex justify-between px-[20px] items-center">
       <RouterLink to="/weekly" @click="disableSetting">
         <IconLogo />
