@@ -9,14 +9,15 @@ import IconMore from '@/components/icons/IconMore.vue';
 const activeText = ref(false)
 </script>
 <template>
-    <article>
-        <div>
-            <RouterLink to="/">
+    <article class="flex flex-col gap-6">
+        <div class="flex justify-between items-center">
+            <RouterLink to="/" class="flex gap-3 items-center">
                 <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
                 <p>Nom Utilisateur</p>
             </RouterLink>
             <IconMore />
         </div>
+        <img src="" alt=" Photo Ici">
         <div class="flex gap-1">
             <p class="">Début de la description ici
                 <span class="text-orpink-200 contents" @click="activeText = !activeText"
@@ -26,18 +27,16 @@ const activeText = ref(false)
                 fin de la description ici.
             </p>
         </div>
-        <div><img src="" alt=" Photo Ici">
-        </div>
-        <ul>
-            <li>
+        <ul class="flex justify-center gap-20">
+            <li class="flex gap-2 items-center">
                 <IconLike />
-                <p>nb Like</p>
+                <p>12</p>
             </li>
-            <li>
+            <li class="flex gap-2 items-center">
                 <IconComment />
-                <p>nb Comments</p>
+                <p>4</p>
             </li>
-            <li>
+            <li class="flex gap-2 items-center">
                 <IconEmoji />
             </li>
         </ul>
