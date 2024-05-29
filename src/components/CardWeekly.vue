@@ -3,7 +3,6 @@ import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 import IconLike from '@/components/icons/IconLike.vue';
 import IconComment from '@/components/icons/IconComment.vue';
-import IconEmoji from '@/components/icons/IconEmoji.vue';
 import IconMore from '@/components/icons/IconMore.vue';
 
 const activeText = ref(false)
@@ -35,9 +34,6 @@ const activeText = ref(false)
             <li class="flex gap-2 items-center">
                 <IconComment />
                 <p>4</p>
-            </li>
-            <li class="flex gap-2 items-center">
-                <IconEmoji />
             </li>
         </ul>
     </article>
