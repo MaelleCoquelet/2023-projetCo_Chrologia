@@ -32,7 +32,6 @@ import { RouterLink } from 'vue-router';
                 <p>ou</p>
                 <p>A REMPLACER</p> <!-- A remplacer par le composant de l'api Google -->
             </div>
-            <RouterLink to="#" class="text-orpink-200 underline">Mot de passe oublié ?</RouterLink>
             <div class="flex gap-2 text-sm font-bold">
                 <p>Vous n'avez pas de compte ?</p>
                 <RouterLink to="#" class="text-orpink-200">Inscrivez vous</RouterLink>
