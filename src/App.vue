@@ -7,7 +7,6 @@ import Button from '@/components/Button.vue';
 
 
 <template>
-  <button />
   <HeaderPage />
   <RouterView />
   <FooterPage />
