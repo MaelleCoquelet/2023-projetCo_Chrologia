@@ -2,11 +2,11 @@
 import { RouterLink } from 'vue-router';
 </script>
 <template>
-    <div class="flex flex-col gap-16">
-        <div class="flex flex-col gap-6 justify-center items-center px-8">
-            <h1 class="text-orpink-200">Connexion</h1>
+    <main class="flex flex-col gap-16 mt-44">
+        <header class="flex flex-col gap-6 justify-center items-center px-8">
+            <h1 class="text-orpink-200 text-3xl">Connexion</h1>
             <p class="text-sm">Veuillez vous connecter à Chrologia pour accéder au contenu de notre site</p>
-        </div>
+        </header>
         <form action="/">
             <fieldset class="flex flex-col gap-6 px-4">
                 <div class="flex flex-col gap-3">
@@ -37,5 +37,5 @@ import { RouterLink } from 'vue-router';
                 <RouterLink to="#" class="text-orpink-200">Inscrivez vous</RouterLink>
             </div>
         </div>
-    </div>
+    </main>
 </template>

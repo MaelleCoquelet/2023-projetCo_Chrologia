@@ -9,13 +9,13 @@ import IconReminder from '@/components/icons/IconReminder.vue';
             <li>
                 <RouterLink to="/weekly" class="menuFeed-items">
                     <IconWeeklyActive />
-                    <p class="text-orpink-200">Weekly</p>
+                    <h1 class="text-orpink-200 text-sm">Weekly</h1>
                 </RouterLink>
             </li>
             <li>
                 <RouterLink to="/reminder" class="menuFeed-items">
                     <IconReminder />
-                    <p>Reminder</p>
+                    <p class="font-bold">Reminder</p>
                 </RouterLink>
             </li>
         </ul>
