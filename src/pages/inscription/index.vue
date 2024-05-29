@@ -7,7 +7,7 @@ import IconLogo from '@/components/icons/IconLogo.vue';
         class="flex flex-col gap-6 justify-center items-center pt-11 pb-3 px- border-b-[1px] bg-slate-700 border-slate-500 fixed z-10 w-full top-0">
         <h1 class="text-xl">Inscription</h1>
     </header>
-    <main class="mt-20 flex flex-col gap-16">
+    <main class="mt-20 mb-20 flex flex-col gap-16">
         <div class="flex flex-col items-center gap-6 pt-12">
             <IconLogo />
             <p class="text-sm text-center">Inscrivez-vous sur Chrologia afin d’avoir accès aux différents contenus de
@@ -80,6 +80,33 @@ import IconLogo from '@/components/icons/IconLogo.vue';
                         placeholder="Ex. Mot_de_passe">
                 </div>
             </fieldset>
+            <div class="text-white text-xs flex flex-col gap-8 items-center px-8">
+                <div class="flex gap-8">
+                    <input type="checkbox" id="cguPdc" name="cguPdc" required>
+                    <label for="cguPdc">En cochant cette case j’accepte les <RouterLink to=""
+                            class="text-orpink-200 underline">Conditions
+                            d’utilisation</RouterLink> et la <RouterLink to="" class="text-orpink-200 underline">
+                            Politique de
+                            Confidentialité</RouterLink> *</label>
+                </div>
+                <div class="flex gap-8">
+                    <input type="checkbox" id="data" name="data">
+                    <label for="data">En cochant cette case, j'autorise Chrologia à partager mes données
+                        personnelles
+                        avec des partenaires dans le cadre de
+                        ses activités marketing et commerciales, dans le respect de sa <RouteurLink
+                            class="text-orpink-200 underline" to="">Politique de
+                            Confidentialité</RouteurLink></label>
+                </div>
+                <div class="">
+                    <div class="">
+                        <button class="">Se Préinscrire</button>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="">* champs obligatoires</p>
+                </div>
+            </div>
         </form>
     </main>
 </template>
