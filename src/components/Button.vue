@@ -9,36 +9,30 @@ const props = withDefaults
 }>(),
 {
     variant: 'default',
-    size: 'medium',
+    size: 'small',
 }
 )
 
 const variantClass ={
-    default: 'bg-orpink-200 text-slate-900 text-center',
-    dark: 'bg-slate-900 text-white text-center'    
+    default: 'bg-orpink-200 text-slate-900 text-center font-bold uppercase',
+    dark: 'bg-slate-900 text-white text-center font-bold uppercase'    
 }
 
 const sizeClass ={
-    small: 'px-2 py-1 text-sm',
-    medium: 'px-4 py-2 text-base',
+    small: 'px-4 py-2 text-sm',
+    medium: 'w-full px-4 py-2 text-base'
 }
 
 </script>
 
 <template>
-    <RouterLink
-    class="inline-flex items-center gap-2 text-slate-900 border-2 font-bold rounded-lg transition duration-300 ease-in-out"
-    :class="[variantClass[props.variant], sizeClass[props.size]]"
-    :to="`${url}`"
-  >
-    <component
-      v-if="props.icon"
-      :is="props.icon"
-      :class="props.variant === 'dark' ? 'stroke-white' : 'stroke-slate-900'"
-      class="size-5"
-    />
-    {{ text }}
-  </RouterLink>
-
+    <RouterLink class="inline-flex items-center justify-center rounded-md transition duration-300 ease-in-out" 
+    :class="[variantClass[props.variant], sizeClass[props.size]]" 
+    :to="`${url}`">
+    
+    <component :class="props.variant === 'dark' ? 'text-white' : 'text-slate-900'"/>
+    {{text}}
+        
+    </RouterLink>
 
 </template>
