@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 <template>
     <main class="flex flex-col gap-16 mt-44">
         <header class="flex flex-col gap-6 justify-center items-center px-8">
-            <h1 class="text-orpink-200">Connexion</h1>
+            <h1 class="text-orpink-200 text-3xl">Connexion</h1>
             <p class="text-sm">Veuillez vous connecter à Chrologia pour accéder au contenu de notre site</p>
         </header>
         <form action="/">
