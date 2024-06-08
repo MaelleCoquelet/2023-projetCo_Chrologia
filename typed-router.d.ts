@@ -20,6 +20,12 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/inscription/': RouteRecordInfo<'/inscription/', '/inscription', Record<never, never>, Record<never, never>>,
+    '/parametres/': RouteRecordInfo<'/parametres/', '/parametres', Record<never, never>, Record<never, never>>,
+    '/parametres/a-propos': RouteRecordInfo<'/parametres/a-propos', '/parametres/a-propos', Record<never, never>, Record<never, never>>,
+    '/parametres/conditions-utilisation': RouteRecordInfo<'/parametres/conditions-utilisation', '/parametres/conditions-utilisation', Record<never, never>, Record<never, never>>,
+    '/parametres/conditions-vente': RouteRecordInfo<'/parametres/conditions-vente', '/parametres/conditions-vente', Record<never, never>, Record<never, never>>,
+    '/parametres/politique-confidentialite': RouteRecordInfo<'/parametres/politique-confidentialite', '/parametres/politique-confidentialite', Record<never, never>, Record<never, never>>,
+    '/parametres/politique-cookies': RouteRecordInfo<'/parametres/politique-cookies', '/parametres/politique-cookies', Record<never, never>, Record<never, never>>,
     '/profil/': RouteRecordInfo<'/profil/', '/profil', Record<never, never>, Record<never, never>>,
     '/reminder/': RouteRecordInfo<'/reminder/', '/reminder', Record<never, never>, Record<never, never>>,
     '/reminder/[id]': RouteRecordInfo<'/reminder/[id]', '/reminder/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
