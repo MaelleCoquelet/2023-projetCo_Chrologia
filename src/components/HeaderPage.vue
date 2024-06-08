@@ -18,7 +18,7 @@ function disableSetting() {
       <RouterLink to="/weekly" @click="disableSetting">
         <IconLogo />
       </RouterLink>
-      <RouterLink to="/settings" @click="settingActive = !settingActive">
+      <RouterLink to="/parametres" @click="settingActive = !settingActive">
         <IconSettings :class="{ 'icon-fillActive': settingActive }" />
       </RouterLink>
     </nav>
