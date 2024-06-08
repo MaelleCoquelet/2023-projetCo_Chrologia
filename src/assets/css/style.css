@@ -26,9 +26,6 @@
 }
 
 @layer components {
-    .footer-items {
-        @apply flex gap-12 align-middle items-center;
-    }
 
     .menuFeed-items {
         @apply flex flex-row items-center gap-2 p-1;
