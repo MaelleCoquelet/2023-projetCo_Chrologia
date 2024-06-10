@@ -33,7 +33,7 @@ import Button from '@/components/Button.vue';
             </div>
             <div class="flex gap-2 text-sm font-bold">
                 <p>Vous n'avez pas de compte ?</p>
-                <RouterLink to="#" class="text-orpink-200">Inscrivez vous</RouterLink>
+                <RouterLink to="/inscription" class="text-orpink-200">Inscrivez vous</RouterLink>
             </div>
         </div>
     </main>
