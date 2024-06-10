@@ -14,27 +14,27 @@ import Button from '@/components/Button.vue';
             </h1>
             <div></div>
         </header>
-        <section>
-            <div>
-                <h2>Chrologia +</h2>
+        <section class="flex flex-col gap-12">
+            <div class="flex flex-col gap-6">
+                <h2 class="text-xl text-orpink-200 font-bold text-center">Chrologia +</h2>
                 <p>Profitez pleinement de notre abonnement premium, Chrologia +, pour partager encore plus de contenu et
                     bénéficier d'interactions plus personnalisées.</p>
             </div>
-            <div>
-                <h3>Avantages</h3>
-                <ul>
+            <div class="flex flex-col gap-6">
+                <h3 class="text-sm font-bold text-stone-100">Avantages</h3>
+                <ul class="text-stone-100 text-sm flex flex-col gap-2 list-disc pl-2">
                     <li>Envie de partager davantage ? Poster plus fréquemment au moment du Reminder (4 maximum)</li>
                     <li>Personnalisation complète du profil (bannière et bio).</li>
                     <li>Profitez d'une expérience sans publicités</li>
                 </ul>
             </div>
-            <div>
-                <h3>Abonnement mensuel sur Chrologia</h3>
-                <p>4,99€ / mois</p>
+            <div class="flex flex-col gap-8 justify-center items-center">
+                <h3 class="text-sm font-bold text-center text-stone-100">Abonnement mensuel sur Chrologia</h3>
+                <p class="text-3xl font-semibold text-orpink-200 ">4,99€ / mois</p>
                 <Button text="S'abonner" />
             </div>
             <p>En cliquant sur S'abonner, vous acceptez nos
-                <RouterLink to="">Conditions générales de ventes</RouterLink>.
+                <RouterLink to="/parametres/conditions-vente" class="text-orpink-200 underline">Conditions générales de ventes</RouterLink>.
             </p>
         </section>
     </main>
