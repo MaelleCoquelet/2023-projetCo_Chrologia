@@ -29,7 +29,6 @@ declare module 'vue-router/auto-routes' {
     '/parametres/politique-cookies': RouteRecordInfo<'/parametres/politique-cookies', '/parametres/politique-cookies', Record<never, never>, Record<never, never>>,
     '/profil/': RouteRecordInfo<'/profil/', '/profil', Record<never, never>, Record<never, never>>,
     '/reminder/': RouteRecordInfo<'/reminder/', '/reminder', Record<never, never>, Record<never, never>>,
-    '/reminder/[id]': RouteRecordInfo<'/reminder/[id]', '/reminder/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/weekly/': RouteRecordInfo<'/weekly/', '/weekly', Record<never, never>, Record<never, never>>,
   }
 }
