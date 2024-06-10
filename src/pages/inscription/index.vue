@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 import IconLogo from '@/components/icons/IconLogo.vue';
+import Button from '@/components/Button.vue';
 </script>
 <template>
     <header
@@ -100,7 +101,7 @@ import IconLogo from '@/components/icons/IconLogo.vue';
                 </div>
                 <div class="">
                     <div class="">
-                        <button class="">Se Préinscrire</button>
+                        <Button url="/" text="s'inscrire"/>  
                     </div>
                 </div>
                 <div class="">
