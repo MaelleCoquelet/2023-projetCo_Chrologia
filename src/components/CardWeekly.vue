@@ -4,6 +4,11 @@ import { ref } from 'vue';
 import IconLike from '@/components/icons/IconLike.vue';
 import IconComment from '@/components/icons/IconComment.vue';
 import IconMore from '@/components/icons/IconMore.vue';
+import IconCross from './icons/IconCross.vue';
+import IconUnfollow from './icons/IconUnfollow.vue';
+import IconBlock from './icons/IconBlock.vue';
+import IconEye from './icons/IconEye.vue';
+import IconFlag from './icons/IconFlag.vue';
 
 const activeText = ref(false)
 </script>
@@ -36,5 +41,31 @@ const activeText = ref(false)
                 <p>4</p>
             </li>
         </ul>
+        <section>
+            <IconCross />
+            <h3>
+                Paramètres du post
+            </h3>
+            <div>
+                <p>Date de création<span>DATE</span></p>
+                <p>Date de publication<span>DATE</span></p>
+            </div>
+            <div>
+                <button>
+                    <IconUnfollow />
+                    <p>Ne plus suivre l’utilisateur</p>
+                </button><button>
+                    <IconBlock />
+                    <p>Bloquer l’utilisateur</p>
+                </button><button>
+                    <IconEye />
+                    <p>Masquer le post</p>
+                </button>
+            </div>
+            <div>
+                <IconFlag />
+                <p>Signaler le post</p>
+            </div>
+        </section>
     </article>
 </template>
