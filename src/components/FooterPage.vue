@@ -2,7 +2,7 @@
 
 import { RouterLink } from 'vue-router';
 import IconHome from '@/components/icons/IconHome.vue';
-import IconLetter from '@/components/icons/IconLetter.vue';
+import IconNotif from '@/components/icons/IconNotif.vue';
 import IconPlus from '@/components/icons/IconPlus.vue';
 import IconSearch from '@/components/icons/IconSearch.vue';
 
@@ -19,7 +19,7 @@ import IconSearch from '@/components/icons/IconSearch.vue';
                 </li>
                 <li>
                     <RouterLink to="/">
-                        <IconSearch />
+                        <IconNotif />
                     </RouterLink>
                 </li>
 
@@ -33,7 +33,7 @@ import IconSearch from '@/components/icons/IconSearch.vue';
 
                 <li>
                     <RouterLink to="/">
-                        <IconLetter />
+                        <IconSearch />
                     </RouterLink>
                 </li>
                 <li>
