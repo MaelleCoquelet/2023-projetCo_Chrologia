@@ -20,19 +20,19 @@ import Button from '@/components/Button.vue';
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="prenom">Prénom *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="prenom" type="text" name="prenom" required placeholder="Ex. Shoyo">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="nom">Nom *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="nom" type="text" name="nom" required placeholder="Ex. Hinata">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="date">Date de Naissance *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="dateDeNaissance" type="date" name="dateDeNaissance" required>
                 </div>
             </fieldset>
@@ -41,19 +41,19 @@ import Button from '@/components/Button.vue';
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="email" type="email" name="email" required placeholder="Ex. azerty@gmail.com">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="email">Téléphone *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="telephone" type="tel" name="telephone" placeholder="Ex. 08 20 20 20 20">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
                         placeholder="Ex. Mot_de_passe">
                 </div>
@@ -63,20 +63,20 @@ import Button from '@/components/Button.vue';
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="prenom">Nom d'utilisateur *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="pseudo" type="text" name="pseudo" required placeholder="Ex. HighFly">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
                         placeholder="Ex. Mot_de_passe">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="mdp">Confirmation mot de passe *</label>
                     <input
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
                         placeholder="Ex. Mot_de_passe">
                 </div>
@@ -84,9 +84,10 @@ import Button from '@/components/Button.vue';
             <div class="text-white text-xs flex flex-col gap-8 items-center px-8">
                 <div class="flex gap-8">
                     <input type="checkbox" id="cguPdc" name="cguPdc" required>
-                    <label for="cguPdc">En cochant cette case j’accepte les <RouterLink to=""
-                            class="text-orpink-200 underline">Conditions
-                            d’utilisation</RouterLink> et la <RouterLink to="" class="text-orpink-200 underline">
+                    <label for="cguPdc">En cochant cette case j’accepte les <RouterLink
+                            to="/parametres/conditions-utilisation" class="text-orpink-200 underline">Conditions
+                            d’utilisation</RouterLink> et la <RouterLink to="/parametres/politique-confidentialite"
+                            class="text-orpink-200 underline">
                             Politique de
                             Confidentialité</RouterLink> *</label>
                 </div>
@@ -96,12 +97,12 @@ import Button from '@/components/Button.vue';
                         personnelles
                         avec des partenaires dans le cadre de
                         ses activités marketing et commerciales, dans le respect de sa <RouteurLink
-                            class="text-orpink-200 underline" to="">Politique de
+                            class="text-orpink-200 underline" to="/parametres/politique-confidentialite">Politique de
                             Confidentialité</RouteurLink></label>
                 </div>
                 <div class="">
                     <div class="">
-                        <Button url="/" text="s'inscrire"/>  
+                        <Button url="/" text="s'inscrire" />
                     </div>
                 </div>
                 <div class="">
