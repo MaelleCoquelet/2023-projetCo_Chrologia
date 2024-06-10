@@ -48,13 +48,13 @@ const overlayOpen = ref(0)
         <section
             class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 px-5 -translate-x-5 fixed z-20 bottom-0 w-full"
             :class="{ '!flex': overlayOpen == 1 }">
-            <div class="flex items-center justify-between pb-3 border-b border-slate-500">
+            <header class="flex items-center justify-between pb-3 border-b border-slate-500">
                 <IconCross @pointerdown="overlayOpen = 0" />
                 <h3 class="text-stone-100 text-xl text-center">
                     Paramètres du post
                 </h3>
                 <div></div>
-            </div>
+            </header>
             <div class="flex flex-col gap-6">
                 <h4 class="text-stone-100 text-sm text-bold">Infos du post</h4>
                 <div class="flex flex-row justify-center gap-6">
@@ -85,13 +85,13 @@ const overlayOpen = ref(0)
         <section
             class="hidden py-6 rounded-t flex-col gap-6 border-b border-slate-500 bg-slate-700 px-5 -translate-x-5 fixed z-30 bottom-0 w-full"
             :class="{ '!flex': overlayOpen == 2 }">
-            <div class="flex items-center justify-between pb-3 border-b border-slate-500">
+            <header class="flex items-center justify-between pb-3 border-b border-slate-500">
                 <IconCross @pointerdown="overlayOpen = 0" />
                 <h3 class="text-stone-100 text-xl text-center">
                     Commentaires
                 </h3>
                 <div></div>
-            </div>
+            </header>
             <div class="flex flex-col gap-6 max-h-screen overflow-scroll">
                 <Commentaire v-for="commentaire in 8" />
             </div>
