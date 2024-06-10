@@ -1,38 +1,40 @@
 <script setup lang="ts">
 
 const props = withDefaults
- (defineProps<{
-    variant?: 'default' | 'dark' 
-    size?:'small' | 'medium' 
-    text?: string
-    url?: string
-}>(),
-{
-    variant: 'default',
-    size: 'small',
-}
-)
+    (defineProps<{
+        variant?: 'default' | 'dark' | 'disabled'
+        size?: 'small' | 'medium'
+        text?: string
+        url?: string
+    }>(),
+        {
+            variant: 'default',
+            size: 'small',
+        }
+    )
 
-const variantClass ={
-    default: 'bg-orpink-200 text-slate-900 text-center font-bold uppercase',
-    dark: 'bg-slate-900 text-white text-center font-bold uppercase'    
+const variantClass = {
+    default: 'bg-orpink-200 text-slate-900',
+    dark: 'bg-slate-900 text-white',
+    disabled: 'bg-transparent border-2 border-red-500 text-red-500',
+
 }
 
-const sizeClass ={
-    small: 'px-4 py-2 text-sm',
-    medium: 'w-full px-4 py-2 text-base'
+const sizeClass = {
+    small: 'text-sm',
+    medium: 'w-full text-base'
 }
 
 </script>
 
 <template>
-    <RouterLink class="inline-flex items-center justify-center rounded-md transition duration-300 ease-in-out" 
-    :class="[variantClass[props.variant], sizeClass[props.size]]" 
-    :to="`${url}`">
-    
-    <component :class="props.variant === 'dark' ? 'text-white' : 'text-slate-900'"/>
-    {{text}}
-        
+    <RouterLink
+        class="inline-flex text-center px-4 py-2 font-bold uppercase items-center justify-center rounded-md transition duration-300 ease-in-out"
+        :class="[variantClass[props.variant], sizeClass[props.size]]" :to="`${url}`">
+
+        <component :class="props.variant === 'dark' ? 'text-white' : 'text-slate-900'" />
+        {{ text }}
+
     </RouterLink>
 
 </template>
