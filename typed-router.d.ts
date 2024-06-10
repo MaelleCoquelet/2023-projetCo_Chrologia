@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/inscription/': RouteRecordInfo<'/inscription/', '/inscription', Record<never, never>, Record<never, never>>,
     '/parametres/': RouteRecordInfo<'/parametres/', '/parametres', Record<never, never>, Record<never, never>>,
     '/parametres/a-propos': RouteRecordInfo<'/parametres/a-propos', '/parametres/a-propos', Record<never, never>, Record<never, never>>,
+    '/parametres/abonnement': RouteRecordInfo<'/parametres/abonnement', '/parametres/abonnement', Record<never, never>, Record<never, never>>,
     '/parametres/conditions-utilisation': RouteRecordInfo<'/parametres/conditions-utilisation', '/parametres/conditions-utilisation', Record<never, never>, Record<never, never>>,
     '/parametres/conditions-vente': RouteRecordInfo<'/parametres/conditions-vente', '/parametres/conditions-vente', Record<never, never>, Record<never, never>>,
     '/parametres/politique-confidentialite': RouteRecordInfo<'/parametres/politique-confidentialite', '/parametres/politique-confidentialite', Record<never, never>, Record<never, never>>,

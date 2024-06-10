@@ -12,7 +12,7 @@ import IconArrow from '@/components/icons/IconArrow.vue';
                     <IconArrow />
                 </li>
                 <li class="flex justify-between items-center">
-                    <RouterLink to="/">Abonnement</RouterLink>
+                    <RouterLink to="/parametres/abonnement">Abonnement</RouterLink>
                     <IconArrow />
                 </li>
                 <li class="flex justify-between items-center">
