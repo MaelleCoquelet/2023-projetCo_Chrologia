@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+import Button from '@/components/Button.vue';
 </script>
 <template>
     <main class="flex flex-col gap-16 mt-44">
@@ -26,9 +27,7 @@ import { RouterLink } from 'vue-router';
         </form>
         <div class="flex flex-col px-8 gap-6">
             <div class="flex flex-col gap-3 justify-center items-center">
-                <button> <!-- A remplacer par un composant button -->
-                    Se connecter
-                </button>
+                <Button text="se connecter" url="/weekly"/>
                 <p>ou</p>
                 <p>A REMPLACER</p> <!-- A remplacer par le composant de l'api Google -->
             </div>

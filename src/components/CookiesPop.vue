@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router';
 import IconCross from '@/components/icons/IconCross.vue';
 import { ref } from 'vue';
+import Button from './Button.vue';
 
 const openCookies = ref(true);
 </script>
@@ -21,8 +22,8 @@ const openCookies = ref(true);
                     class="text-orpink-200 underline">
                     politique relative aux cookies. </RouterLink></span></p>
         <div class="flex flex-col gap-3">
-            <button @click="openCookies = !openCookies">Autoriser tous les cookies</button>
-            <button @click="openCookies = !openCookies">Refuser les cookies</button>
+            <Button @click="openCookies = !openCookies" url="/weekly" text="Autoriser tous les cookies" />
+            <Button @click="openCookies = !openCookies" url="/weekly" variant="dark" text="Refuser tous les cookies" />
         </div>
     </section>
 </template>
