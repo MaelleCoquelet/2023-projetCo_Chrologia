@@ -9,6 +9,7 @@ import IconUnfollow from './icons/IconUnfollow.vue';
 import IconBlock from './icons/IconBlock.vue';
 import IconEye from './icons/IconEye.vue';
 import IconFlag from './icons/IconFlag.vue';
+import { parseCommandLine } from 'typescript';
 
 
 const activeText = ref(false)
@@ -21,7 +22,7 @@ const parametrePostOpen = ref(false)
                 <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
                 <p>Nom Utilisateur</p>
             </RouterLink>
-            <IconMore @click="parametrePostOpen = !parametrePostOpen" />
+            <IconMore @click="parametrePostOpen = true" />
         </div>
         <img src="" alt=" Photo Ici">
         <div class="flex gap-1">
@@ -46,7 +47,7 @@ const parametrePostOpen = ref(false)
         <section class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 px-5 -translate-x-5 fixed z-20 bottom-0 w-full"
             :class="{ '!flex': parametrePostOpen }">
             <div class="flex items-center justify-between pb-3 border-b border-slate-500">
-                <IconCross />
+                <IconCross @click="parametrePostOpen = !parametrePostOpen" />
                 <h3 class="text-white text-xl text-center">
                     Paramètres du post
                 </h3>
