@@ -15,14 +15,15 @@ import Button from '@/components/Button.vue';
             <div></div>
         </header>
         <section class="flex flex-col gap-3">
-            <h2 class="text-xl text-orpink-200 font-bold">Qui sommes nous ?</h2>
+            <h2 class="text-xl text-orpink-200 font-bold">Qui sommes nous&nbsp;?</h2>
             <p>Nous sommes trois étudiants en MMI (Métiers du Multimédia et de l'Internet) et avons élaboré ce
                 projet dans le cadre de nos études. Notre ambition était de concevoir un concept novateur destiné à
                 révolutionner la vie quotidienne de nombreux groupes d'amis. Nous avons mis en commun nos
                 compétences en design, en développement web et en communication pour donner vie à cette idée. Notre
                 objectif était de créer une solution pratique et attrayante, parfaitement adaptée aux besoins et aux
                 habitudes de notre génération. Après des mois de recherche, de conception et de développement, nous
-                sommes fiers de présenter le fruit de notre travail : Chrologia qui révolutionne la façon dont les
+                sommes fiers de présenter le fruit de notre travail&nbsp;: Chrologia qui révolutionne la façon dont
+                les
                 amis interagissent ensemble.</p>
 
         </section>
@@ -60,13 +61,13 @@ import Button from '@/components/Button.vue';
                     <h3 class="text-xl text-stone-100">Message</h3>
 
                     <div class="flex flex-col gap-3">
-                        <label class="text-stone-100 font-bold text-sm" for="email">Objet *</label>
+                        <label class="text-stone-100 font-bold text-sm" for="email">Objet&nbsp;*</label>
                         <input
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             placeholder="Problème technique">
                     </div>
                     <div class="flex flex-col gap-3">
-                        <label class="text-stone-100 font-bold text-sm" for="email">Message *</label>
+                        <label class="text-stone-100 font-bold text-sm" for="email">Message&nbsp;*</label>
                         <textarea
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             placeholder="Écrivez votre message ici"></textarea>
@@ -99,7 +100,7 @@ import Button from '@/components/Button.vue';
                         </div>
                     </div>
                     <div class="">
-                        <p class="">* champs obligatoires</p>
+                        <p class="">*&nbsp;champs obligatoires</p>
                     </div>
                 </div>
             </form>

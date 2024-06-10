@@ -18,19 +18,19 @@ import Button from '@/components/Button.vue';
             <fieldset class="flex flex-col gap-6">
                 <h2 class="text-xl text-orpink-200 pb-2">Informations Personnelles</h2>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="prenom">Prénom *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="prenom">Prénom&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="prenom" type="text" name="prenom" required placeholder="Ex. Shoyo">
                 </div>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="nom">Nom *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="nom">Nom&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="nom" type="text" name="nom" required placeholder="Ex. Hinata">
                 </div>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="date">Date de Naissance *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="date">Date de Naissance&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="dateDeNaissance" type="date" name="dateDeNaissance" required>
@@ -39,19 +39,19 @@ import Button from '@/components/Button.vue';
             <fieldset class="flex flex-col gap-6">
                 <h2 class="text-xl text-orpink-200">Contact</h2>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="email" type="email" name="email" required placeholder="Ex. azerty@gmail.com">
                 </div>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="email">Téléphone *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="email">Téléphone&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="telephone" type="tel" name="telephone" placeholder="Ex. 08 20 20 20 20">
                 </div>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
@@ -61,20 +61,20 @@ import Button from '@/components/Button.vue';
             <fieldset class="flex flex-col gap-6">
                 <h2 class="text-xl text-orpink-200">Compte</h2>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="prenom">Nom d'utilisateur *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="prenom">Nom d'utilisateur&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="pseudo" type="text" name="pseudo" required placeholder="Ex. HighFly">
                 </div>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
                         placeholder="Ex. Mot_de_passe">
                 </div>
                 <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="mdp">Confirmation mot de passe *</label>
+                    <label class="text-stone-100 font-bold text-xl" for="mdp">Confirmation mot de passe&nbsp;*</label>
                     <input
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
@@ -89,7 +89,7 @@ import Button from '@/components/Button.vue';
                             d’utilisation</RouterLink> et la <RouterLink to="/parametres/politique-confidentialite"
                             class="text-orpink-200 underline">
                             Politique de
-                            Confidentialité</RouterLink> *</label>
+                            Confidentialité</RouterLink>&nbsp;*</label>
                 </div>
                 <div class="flex gap-8">
                     <input type="checkbox" id="data" name="data">
@@ -106,7 +106,7 @@ import Button from '@/components/Button.vue';
                     </div>
                 </div>
                 <div class="">
-                    <p class="">* champs obligatoires</p>
+                    <p class="">*&nbsp;champs obligatoires</p>
                 </div>
             </div>
         </form>
