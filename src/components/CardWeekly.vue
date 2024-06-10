@@ -10,7 +10,9 @@ import IconBlock from './icons/IconBlock.vue';
 import IconEye from './icons/IconEye.vue';
 import IconFlag from './icons/IconFlag.vue';
 
+
 const activeText = ref(false)
+const parametrePostOpen = ref(false)
 </script>
 <template>
     <article class="flex flex-col gap-6">
@@ -19,7 +21,7 @@ const activeText = ref(false)
                 <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
                 <p>Nom Utilisateur</p>
             </RouterLink>
-            <IconMore />
+            <IconMore @click="parametrePostOpen = !parametrePostOpen" />
         </div>
         <img src="" alt=" Photo Ici">
         <div class="flex gap-1">
@@ -41,31 +43,40 @@ const activeText = ref(false)
                 <p>4</p>
             </li>
         </ul>
-        <section>
-            <IconCross />
-            <h3>
-                Paramètres du post
-            </h3>
-            <div>
-                <p>Date de création<span>DATE</span></p>
-                <p>Date de publication<span>DATE</span></p>
+        <section class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 w-full fixed z-20 bottom-0"
+            :class="{ '!flex': parametrePostOpen }">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-500">
+                <IconCross />
+                <h3 class="text-white text-xl text-center">
+                    Paramètres du post
+                </h3>
+                <div></div>
             </div>
-            <div>
-                <button>
+            <div class="flex flex-col gap-6">
+                <h4 class="text-white text-sm text-bold">Infos du post</h4>
+                <div class="flex flex-row justify-center gap-6">
+                    <p class="flex flex-col justify-center items-center gap-1">Date de création<span>DATE</span></p>
+                    <p class="flex flex-col justify-center items-center gap-1">Date de publication<span>DATE</span></p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 justify-start items-start">
+                <button class="flex gap-6 items-center">
                     <IconUnfollow />
                     <p>Ne plus suivre l’utilisateur</p>
-                </button><button>
+                </button>
+                <button class="flex gap-6 items-center">
                     <IconBlock />
                     <p>Bloquer l’utilisateur</p>
-                </button><button>
+                </button>
+                <button class="flex gap-6 items-center">
                     <IconEye />
                     <p>Masquer le post</p>
                 </button>
             </div>
-            <div>
+            <button class="flex gap-6 items-center">
                 <IconFlag />
                 <p>Signaler le post</p>
-            </div>
+            </button>
         </section>
     </article>
 </template>
