@@ -9,11 +9,12 @@ import IconUnfollow from './icons/IconUnfollow.vue';
 import IconBlock from './icons/IconBlock.vue';
 import IconEye from './icons/IconEye.vue';
 import IconFlag from './icons/IconFlag.vue';
-import { parseCommandLine } from 'typescript';
-
+import IconSend from './icons/IconSend.vue';
+import Commentaire from '@/components/Commentaire.vue';
+import { comment } from 'postcss';
 
 const activeText = ref(false)
-const parametrePostOpen = ref(false)
+const overlayOpen = ref(0)
 </script>
 <template>
     <article class="flex flex-col gap-6">
@@ -22,12 +23,12 @@ const parametrePostOpen = ref(false)
                 <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
                 <p>Nom Utilisateur</p>
             </RouterLink>
-            <IconMore @click="parametrePostOpen = true" />
+            <IconMore @pointerdown="overlayOpen = 1" />
         </div>
         <img src="" alt=" Photo Ici">
         <div class="flex gap-1">
             <p class="">Début de la description ici
-                <span class="text-orpink-200 contents" @click="activeText = !activeText"
+                <span class="text-orpink-200 contents" @pointerdown="activeText = !activeText"
                     :class="{ '!hidden': activeText }">...voir plus</span>
             </p>
             <p class="hidden" :class="{ '!contents': activeText }">
@@ -40,21 +41,22 @@ const parametrePostOpen = ref(false)
                 <p>12</p>
             </li>
             <li class="flex gap-2 items-center">
-                <IconComment />
+                <IconComment @pointerdown="overlayOpen = 2" />
                 <p>4</p>
             </li>
         </ul>
-        <section class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 px-5 -translate-x-5 fixed z-20 bottom-0 w-full"
-            :class="{ '!flex': parametrePostOpen }">
+        <section
+            class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 px-5 -translate-x-5 fixed z-20 bottom-0 w-full"
+            :class="{ '!flex': overlayOpen == 1 }">
             <div class="flex items-center justify-between pb-3 border-b border-slate-500">
-                <IconCross @click="parametrePostOpen = !parametrePostOpen" />
-                <h3 class="text-white text-xl text-center">
+                <IconCross @pointerdown="overlayOpen = 0" />
+                <h3 class="text-stone-100 text-xl text-center">
                     Paramètres du post
                 </h3>
                 <div></div>
             </div>
             <div class="flex flex-col gap-6">
-                <h4 class="text-white text-sm text-bold">Infos du post</h4>
+                <h4 class="text-stone-100 text-sm text-bold">Infos du post</h4>
                 <div class="flex flex-row justify-center gap-6">
                     <p class="flex flex-col justify-center items-center gap-1">Date de création<span>DATE</span></p>
                     <p class="flex flex-col justify-center items-center gap-1">Date de publication<span>DATE</span></p>
@@ -78,6 +80,30 @@ const parametrePostOpen = ref(false)
                 <IconFlag />
                 <p>Signaler le post</p>
             </button>
+        </section>
+
+        <section
+            class="hidden py-6 rounded-t flex-col gap-6 border-b border-slate-500 bg-slate-700 px-5 -translate-x-5 fixed z-30 bottom-0 w-full"
+            :class="{ '!flex': overlayOpen == 2 }">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-500">
+                <IconCross @pointerdown="overlayOpen = 0" />
+                <h3 class="text-stone-100 text-xl text-center">
+                    Commentaires
+                </h3>
+                <div></div>
+            </div>
+            <div class="flex flex-col gap-6 max-h-screen overflow-scroll">
+                <Commentaire v-for="commentaire in 8" />
+            </div>
+            <div class="flex items-center justify-between gap-2">
+                <img class="rounded-full h-10" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
+                <input
+                    class="text-sm text-stone-100 placeholder:text-stone-100 in bg-slate-900 rounded-md px-3 py-[6px] overflow-auto break-all w-full"
+                    required placeholder="Saisir le message">
+                <button>
+                    <IconSend />
+                </button>
+            </div>
         </section>
     </article>
 </template>
