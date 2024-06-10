@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 import CardWeekly from '@/components/CardWeekly.vue';
 </script>
 <template>
-    <main class="flex flex-col py-12 mt-20">
+    <main class="flex flex-col py-12 mt-20 mb-20">
         <div>
             <img class="h-[116px] w-full object-cover" src="/src/assets/img/palicoMHW.webp" alt="Bannière de profil">
             <div class="flex justify-between px-5">

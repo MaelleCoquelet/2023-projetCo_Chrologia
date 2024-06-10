@@ -7,7 +7,7 @@ import CookiesPop from '@/components/CookiesPop.vue';
 <template>
     <MenuFeedWeekly />
     <CookiesPop />
-    <main class="flex flex-col gap-12 py-12 mt-44 px-5">
+    <main class="flex flex-col gap-12 py-12 mt-44 mb-20 px-5">
         <CardWeekly v-for="post in 5" />
     </main>
 </template>
