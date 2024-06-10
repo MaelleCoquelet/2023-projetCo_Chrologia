@@ -8,7 +8,9 @@ import Button from '@/components/Button.vue';
 
     <main class="px-5 flex flex-col gap-12 py-12 mt-20">
         <header class="flex items-center justify-between pb-3 border-b border-slate-500">
-            <IconCross />
+            <RouterLink to="/parametres">
+                <IconCross />
+            </RouterLink>
             <h1 class="text-stone-100 text-xl text-center">
                 Abonnement
             </h1>
@@ -34,7 +36,8 @@ import Button from '@/components/Button.vue';
                 <Button text="S'abonner" />
             </div>
             <p>En cliquant sur S'abonner, vous acceptez nos
-                <RouterLink to="/parametres/conditions-vente" class="text-orpink-200 underline">Conditions générales de ventes</RouterLink>.
+                <RouterLink to="/parametres/conditions-vente" class="text-orpink-200 underline">Conditions générales de
+                    ventes</RouterLink>.
             </p>
         </section>
     </main>
