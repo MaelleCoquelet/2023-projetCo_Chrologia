@@ -43,7 +43,7 @@ const parametrePostOpen = ref(false)
                 <p>4</p>
             </li>
         </ul>
-        <section class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 w-full fixed z-20 bottom-0"
+        <section class="hidden py-11 rounded-t flex-col *:py-6 divide-y bg-slate-700 divide-slate-500 px-5 -translate-x-5 fixed z-20 bottom-0 w-full"
             :class="{ '!flex': parametrePostOpen }">
             <div class="flex items-center justify-between pb-3 border-b border-slate-500">
                 <IconCross />
