@@ -1,10 +1,21 @@
 <script setup lang="ts">
-
+import AddPerson from '@/components/AddPerson.vue';
+import IconSearch from '@/components/icons/IconSearch.vue';
 </script>
 <template>
 
 
     <main class="px-5 flex flex-col gap-12 py-12 mt-20">
-        <h1>RECHERCHER</h1>
+        <div class="flex items-center bg-slate-900 rounded-md py-1 px-3">
+            <IconSearch class="h-4" />
+            <input class="text-sm text-stone-100 placeholder:text-stone-100 bg-transparent w-full"
+                placeholder="Rechercher"></input>
+        </div>
+        <section class="flex flex-col gap-8">
+            <h1 class="text-sm">Suggestions</h1>
+            <div class="flex flex-col gap-6">
+                <AddPerson v-for="add in 6" />
+            </div>
+        </section>
     </main>
 </template>
