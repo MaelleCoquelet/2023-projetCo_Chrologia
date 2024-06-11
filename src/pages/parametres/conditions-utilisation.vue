@@ -16,8 +16,8 @@ import IconCross from '@/components/icons/IconCross.vue';
             </h1>
             <div></div>
         </header>
-        <section >
-                    <div class="text-stone-200">
+        <section class="flex flex-col gap-6" >
+                    <div class="text-stone-200 flex flex-col gap-3">
                         <p class="">En vigueur du 24/02/2024 au 24/05/2026.</p>
                         <p class="">Bienvenue sur Chrologia ! Chrologia est un réseau social proposant
                             à ses Utilisateurs de créer des posts et de
@@ -50,11 +50,11 @@ import IconCross from '@/components/icons/IconCross.vue';
                             inscrire sur Chrologia si vous
                             n’êtes pas d’accord avec une ou plusieurs des dispositions qu’ils contiennent.</p>
                     </div>
-                <div class="">
+                <div class="flex flex-col gap-3">
                     <h2 class="text-stone-200">1. Définitions et interprétation</h2>
                     <div class="text-stone-200">
                         <p>Dans les présentes CGU, les termes ci-après ont la signification suivante&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>« Compte Utilisateur » ou « Profil de l’Utilisateur » désignent l’espace spécifique à un
                                 Utilisateur sur lequel il peut
                                 renseigner des informations sur sa personne, consulter et commenter le Contenu d’autres
@@ -79,7 +79,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">2. Création de compte Utilisateurs</h2>
                     <h3 class="">2. 1. Informations demandées</h3>
                     <div class="">
@@ -88,7 +88,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             votre Compte Utilisateur nous vous demanderons de renseigner les informations
                             suivantes&nbsp;:
                         </p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>votre adresse email&nbsp;;</li>
                             <li>votre numéro de téléphone&nbsp;;</li>
                             <li>votre nom ou prénom&nbsp;;</li>
@@ -109,7 +109,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                     </div>
                     <h3 class="">2. 2. Limite d’âge et autorisation parentale
                     </h3>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>Chrologia est ouvert aux utilisateurs de plus de 16 ans uniquement.</p>
                         <p>Si vous avez moins de 16 ans, vous n’êtes pas autorisé à vous créer un Compte Utilisateur et
                             à utiliser le site web .
@@ -121,9 +121,9 @@ import IconCross from '@/components/icons/IconCross.vue';
                             invitons à nous envoyer un message à l'adresse email&nbsp;: chrologiapro@gmail.com.</p>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">3. Description des Services</h2>
-                    <div class="">
+                    <div class=" flex flex-col gap-2">
                         <p>Vous pouvez utiliser les Services sur votre téléphone via le Site Web Chrologia. Les Services
                             vous permettent de (i)
                             créer, publier, partager du Contenu, de (ii) visionner le Contenu d’autres Utilisateurs
@@ -131,11 +131,11 @@ import IconCross from '@/components/icons/IconCross.vue';
                             (iv) supprimer votre Contenu.</p>
                         <p>1. (i) Créer et partager votre propre Contenu&nbsp;:</p>
                         <p>Sous cette fonctionnalité vous pouvez&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Prendre une photo, envoyer un message, publié une vidéo de vous et de
                                 votre environnement qui seront programmé pour plus
                                 tard ou alors des posts publiés de manière aléatoire;</li>
-                            <li>Choisir de partager les photos, les messages ou les vidéos à vos amis ;
+                            <li>Choisir de partager les photos, les messages ou les vidéos à vos amis&nbsp;;
                             </li>
                             <li>Renseigner diverses informations sur votre Compte Utilisateur, comme
                                 votre biographie, une photo de profil.</li>
@@ -148,7 +148,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         <p>3. (iii) Interagir avec d’autres Utilisateurs</p>
                         <p>Vous pouvez interagir avec les autres Utilisateurs ou avec les Contenus d’autres Utilisateurs
                             grâce à&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>L’interface de commentaires et à la création de ChroMojis&nbsp;;</li>
                             <li>Une fonctionnalité messagerie pour échanger entre Utilisateurs&nbsp;;</li>
                         </ul>
@@ -156,7 +156,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         <p>Vous pouvez choisir de supprimer du Contenu.</p>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">4. Signalement de Contenu illicite ou inapproprié</h2>
                     <div class="">
                         <p>En notre qualité d’hébergeur, nous ne sommes pas soumis à une obligation générale de
@@ -195,14 +195,14 @@ import IconCross from '@/components/icons/IconCross.vue';
                         droit de prendre des
                         sanctions envers l’auteur dudit contenu.</p>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">5. Engagements de l’Utilisateur</h2>
                     <div class="">
                         <p>Dans le cadre de l’utilisation du Site Web, vous vous engagez à vous conformer aux
                             dispositions décrites dans les
                             présentes Conditions générales d’utilisation et aux lois en vigueur. A ce titre vous vous
                             engagez à ne pas&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Utiliser Chrologia si vous avez moins de 16 ans, si votre représentant légal n’a pas
                                 consenti à cette utilisation&nbsp;;</li>
                             <li>Utiliser Chrologia à des fins publicitaires ou commerciales en vue de publier ou de
@@ -241,13 +241,13 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">6. Suppression de Compte</h2>
                     <div class="">
                         <p>Nous nous réservons le droit de suspendre ou supprimer votre Compte Utilisateur sur simple
                             notification de notre part et
                             sans préavis, pour quelques raisons que ce soit et notamment en cas de&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6" >
                             <li>Violation ou tentative de violation des Conditions et/ou de la loi en vigueur&nbsp;;
                             </li>
                             <li>Problèmes techniques ou de sécurité inattendus&nbsp;;</li>
@@ -256,7 +256,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         <p>Dans une telle hypothèse, vous n’êtes pas autorisé à créer un nouveau Compte Utilisateur.</p>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">7. Propriété intellectuelle</h2>
                     <h3 class="">7. 1. Propriété intellectuelle et intégrité du
                         site web</h3>
@@ -283,7 +283,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             L.335-2 et suivants du Code de la
                             propriété intellectuelle.</p>
                         <p>Il est par ailleurs interdit de&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Procéder à des extractions par transfert temporaire ou permanent, ou utiliser le site
                                 web ou ses bases de données
                                 visibles à des fins commerciales ou autres par leur mise à disposition au public en tout
@@ -313,7 +313,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             licence gratuite, non-exclusive, d’une durée de 30 (trente) ans valable pour le monde entier
                             sur tout type de support
                             permettant&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Aux autres Utilisateurs de reproduire et de partager le Contenu sur WhatsApp, Facebook,
                                 Twitter, SnapChat et Instagram,
                                 et plus généralement tout réseau social ou application de messagerie qui pourraient être
@@ -326,13 +326,13 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">8. Exclusion de garantie et de responsabilité</h2>
                     <div class="">
                         <p>Le site web et ses Services sont fournis « tels quels ». En conséquence nous ne vous offrons
                             aucune garantie les
                             concernant, et notamment concernant&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>La conformité de nos Services à vos attentes&nbsp;;</li>
                             <li>L’absence d’interruption, d’erreurs, de failles de sécurité, d’atteinte aux droits des
                                 tiers dans le cadre du
@@ -359,7 +359,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                     </div>
 
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">9. Protection des données personnelles</h2>
                     <div class="">
                         <p class="">Les utilisateurs sont informés que les données à caractère
@@ -378,7 +378,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         <p>En cochant la mention “J’autorise Chrologia à partager mes données avec des partenaires dans
                             le cadre de ses activités
                             commerciales” l’utilisateur autorise Chrologia à&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>céder ses données à des entreprises tierces, en accord avec la réglementation ordonnée
                                 par le Règlement Général sur
                                 Protection des Données</li>
@@ -387,7 +387,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                                 plateforme.</li>
                         </ul>
                         <p>En retour Chrologia s’engage à&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>permettre le retrait immédiat et sans conditions du consentement de l’utilisateur à
                                 l’exploitation commerciale de ses
                                 données via une option dans les paramètres du compte de l’utilisateur</li>
@@ -405,7 +405,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">10. Modification des Conditions Générales d’Utilisation</h2>
                     <div class="">
                         <p>Chrologia se réserve la faculté de modifier ses CGU à tout moment. Dans ce cas, Chrologia
@@ -415,7 +415,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             l’ouverture du site web.</p>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">11. Divers</h2>
                     <div class="">
                         <p>Dans l’hypothèse où la totalité ou une partie des dispositions des CGU serait considérée
@@ -429,7 +429,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             Politique de confidentialité, correspondent à la totalité de l’accord entre les Parties.</p>
                     </div>
                 </div>
-                <div class="text-stone-200">
+                <div class="text-stone-200 flex flex-col gap-3">
                     <h2 class="">12. Loi applicable et juridiction compétente</h2>
                     <div class="">
                         <p>Pour toute réclamation ou différend, l’utilisateur est invité en priorité à contacter
