@@ -7,13 +7,15 @@ import { onErrorCaptured, computed } from 'vue';
 
 // Pour cacher le footer et header si besoin
 const routeActuelle = useRoute()
-const hideOnRoutes = ['/inscription']
+const showOnRoutes = ['/weekly', '/reminder', '/notifications', '/rechercher', '/profil', '/parametres'];
+const show = computed(() => showOnRoutes.some(path => routeActuelle.path.startsWith(path)));
+const hideOnRoutes = ['/parametres/a-propos', '/parametres/abonnement', '/parametres/conditions-utilisation', '/parametres/conditions-vente', '/parametres/politique-confidentialite', '/parametres/politique-cookies'];
 const hide = computed(() => !hideOnRoutes.some(path => routeActuelle.path.startsWith(path)));
 </script>
 
 
 <template>
-  <HeaderPage v-if="hide" />
+  <HeaderPage v-if="show, hide" />
   <RouterView />
-  <FooterPage v-if="hide" />
+  <FooterPage v-if="show, hide" />
 </template>
