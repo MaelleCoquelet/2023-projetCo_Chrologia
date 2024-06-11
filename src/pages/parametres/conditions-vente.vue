@@ -27,7 +27,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             (ci-après désignées CGV) régissent les relations contractuelles entre vous et :</p>
                         <p>
                              la SARL Chrologia, immatriculée au Registre du commerce sous le numéro XXX XX XXXX,
-                             et dont le siège social est situé au 4 places lucien tharradin 25100 Montbéliard </p>
+                             et dont le siège social est situé au 4 places lucien tharradin 25100 Montbéliard</p>
                         <p>Nous vous invitons à les lire attentivement avant passer une commande sur le site www.chrologia.fr. Toute commande passée sur ce site implique votre adhésion expresse et sans réserve aux présentes CGV.
                              Leur acceptation formelle vous sera demandée avant la validation de votre commande.</p>
                         <p>
@@ -48,7 +48,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             L’Utilisateur accepte de recevoir de la part de Chrologia, sur l’adresse e-mail qu’il a déclarée lors de son inscription au Service, des informations relatives à l’utilisation du Service. 
                             L’Utilisateur est invité à consulter régulièrement cette boîte aux lettres afin de prendre connaissance des éventuels messages d’information dont il est destinataire.</p>
                         <p>
-                           Sauf preuve contraire, les données enregistrées par Chrologia constituent la preuve de l’ensemble des transactions passées par  
+                           Sauf preuve contraire, les données enregistrées par Chrologia constituent la preuve de l’ensemble des transactions passées par 
                             Chrologia avec les Utilisateurs du Site. Les données enregistrées par le système de paiement constituent la preuve des transactions financières, sauf preuve contraire.</p>
                             <p> Chrologia se réserve le droit de suspendre ou de clôturer le compte d’un Utilisateur qui contreviendrait 
                                 aux stipulations des CGV ainsi qu’aux dispositions légales et règlementaires françaises en vigueur.
@@ -70,114 +70,117 @@ import IconCross from '@/components/icons/IconCross.vue';
                     </div>
                 </div>
                 <div class="flex flex-col gap-6">
-                    <h2 class="">3. Partage des Données</h2>
+                    <h2 class="">4. Avantages de l’abonnement</h2>
                     <div class="flex flex-col gap-3">
-                        <p>Nous ne partageons pas vos informations personnelles identifiables avec des tiers sans votre
-                            consentement explicite,
-                            sauf dans les cas suivants&nbsp;:</p>
-                        <ul class="list-disc pl-6">
-                            <li>Consentement de l'Utilisateur&nbsp;: Si vous cochez la case “ j'autorise Chrologia à
-                                partager mes données avec des
-                                partenaires dans le cadre de ses activités marketing et commerciales, dans le respect de
-                                sa Politique de
-                                Confidentialité.", vous consentez expressément à ce que vos données soient partagées
-                                avec nos partenaires dans le cadre
-                                de nos activités marketing et commerciales.</li>
-                            <li>Prestataires de Services&nbsp;: Nous pouvons partager vos informations avec des
-                                prestataires
-                                de services tiers qui nous
-                                aident à fournir et à améliorer notre plateforme, sous conditions d'obligations de
-                                confidentialité appropriées.</li>
-                            <li>Conformité Juridique&nbsp;: Nous pouvons divulguer vos données si nous sommes légalement
-                                tenus de le faire pour nous
-                                conformer à une obligation légale, protéger nos droits ou faire respecter nos conditions
-                                d'utilisation.</li>
-                            <li>Marketing et Recherche Commerciale&nbsp;: Nous pouvons partager des données agrégées et
-                                anonymisées avec des partenaires pour
-                                des analyses marketing et commerciales, dans le but de développer de nouveaux produits,
-                                d'améliorer nos services et de
-                                fournir des publicités ciblées.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-6">
-                    <h2 class="">4. Vos Choix et Contrôles</h2>
-                    <div class="flex flex-col gap-3">
-                        <p>Vous avez le contrôle sur vos informations personnelles et pouvez choisir de limiter ou de
-                            désactiver certaines
-                            fonctionnalités de collecte de données dans les paramètres de votre compte. Vous pouvez
-                            également&nbsp;:</p>
-                        <ul class="list-disc pl-6">
-                            <li>Nous contacter à tout moment pour demander la suppression ou la mise à jour de vos
-                                données.</li>
-                            <li>Savoir avec qui nous partageons vos données.</li>
-                            <li>Obtenir une copie de vos informations en contactant notre service d'assistance en
-                                matière de protection de la vie privée</li>
-                            <li>Corriger tes informations en utilisant les réglages du Site Web ou en contactant notre
-                                service d'assistance en matière
-                                de protection de la vie privée.</li>
-                            <li>Poser une question sur nos pratiques de protection de la vie privée en contactant notre
-                                service d’assistance en matière
-                                de protection de la vie privée.</li>
-                        </ul>
-                        <p>Vous avez également le droit de rétractation concernant le consentement que vous avez accordé
-                            pour l'utilisation de vos
-                            données à des fins marketing et commerciales. Vous pouvez exercer ce droit en nous
-                            contactant par e-mail à
-                            <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
-                                chrologiapro@gmail.com
-                            </a> Veuillez noter que vos données seront conservées mais non exploitées
-                            pendant une période
-                            maximale de 3 (trois) ans à compter de la date de réception de votre demande de
-                            rétractation.</p>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-6">
-                    <h2 class="">5. Protection des Enfants</h2>
-                    <div class="flex flex-col gap-3">
-                        <p>Chrologia n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas
-                            intentionnellement d'informations
-                            personnelles auprès des enfants de moins de 16 ans . Si vous avez moins de 16 ans, veuillez
-                            ne pas utiliser Chrologia ni
-                            nous fournir vos informations personnelles. Si nous découvrons que nous avons collecté
-                            involontairement des informations
-                            personnelles auprès d'un enfant de moins de 16 ans , nous prendrons des mesures pour
-                            supprimer ces informations dans les
-                            meilleurs délais. Les parents ou tuteurs qui pensent que leur enfant a fourni des
-                            informations personnelles à Chrologia
-                            et qui souhaitent que ces informations soient supprimées de nos systèmes sont invités à nous
-                            contacter à
-                            <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
-                                chrologiapro@gmail.com
-                            </a> Nous encourageons les parents et tuteurs à surveiller l'utilisation
-                            d'Internet de leurs enfants
-                            et à les guider lorsqu'ils naviguent en ligne. Chrologia assure avoir pris les mesures pour
-                            éviter l’accès à son service
-                            à des enfants de moins de 16 ans, et se décharge de toute responsabilité dans le cas où un
-                            enfant de moins de 16 ans
-                            obtiendrait un accès à son service par des moyens de détournement.</p>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-6">
-                    <h2 class="">6. Sécurité des Données</h2>
-                    <div class="flex flex-col gap-3">
-                        <p>Nous prenons des mesures de sécurité techniques et organisationnelles pour protéger vos
-                            informations contre tout accès
-                            non autorisé, toute divulgation ou toute altération.</p>
-                        <p>En cochant la case d'accord lors de la création de votre compte ou lors de l'utilisation de
-                            notre plateforme, vous
-                            reconnaissez avoir lu, compris et accepté les termes de cette Politique de Confidentialité.
+                        <p class=""> Tout abonnement listé ci-dessus donne un droit d’accès la version du site garantis sans pub et
+                             l’accès à plus de création de contenus “ Reminder “ fonctionnalité principale du site web.
                         </p>
-                        <p>Nous nous réservons le droit de modifier cette Politique de Confidentialité à tout moment et
-                            vous encourageons à la
-                            consulter régulièrement pour rester informé de nos pratiques en matière de confidentialité.
+                        
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h2 class="">5. Prix et Modalités de paiement</h2>
+                    <div class="flex flex-col gap-3">
+                        <p>Les prix en vigueur des différentes offres d’abonnement sont ceux affichés sur le Site au jour de l’enregistrement de la commande. Ils sont indiqués en euros, toutes taxes et participation aux frais 
+                            de traitement et d’expédition comprises pour la France (frais additionnels pour la zone Euro, les Dom TOM, la suisse et le reste du monde). 
+                            Toutes les commandes sont payables en euros. En aucun cas les fluctuations du prix d’un Abonnement ne peuvent donner lieu à réclamation ou à annulation d’une commande par l’Utilisateur
                         </p>
-                        <p>Pour toute question ou préoccupation concernant notre Politique de Confidentialité, veuillez
-                            nous contacter à
-                            <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
-                                chrologiapro@gmail.com
-                            </a></p>
-                        <p>Merci d'utiliser Chrologia !</p>
+                        <ul class="list-disc pl-6">
+                            <li class="font-bold">Paiement par carte bancaire par serveur de paiement sécurisé</li>
+                            
+                        </ul>
+                        <p class=" pl-6"> Le paiement en ligne par carte bancaire est assuré par la solution sécurisée Payplug qui intègre un procédé de cryptage en mode SSL (Secure Socket Layer).Les cartes bancaires acceptées par les systèmes de paiement retenus par Chrologia sont présentées sur la page de paiement des offres selon leur disponibilité.Dans le cadre d’un paiement automatique par carte bancaire, 
+                            il appartient à l’Utilisateur dont la durée de validité de la carte bancaire a expiré de contacter le service client et de fournir les coordonnées de carte bancaire valides. A défaut, l’abonnement sera suspendu.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h2 class="">6. Conditions d’abonnement</h2>
+                    <div class="flex flex-col gap-3">
+                        <p>
+                         <span class="font-bold">Pour les abonnements payés comptant par CB</span>, aucun remboursement ne sera accepté avant échéance de l’abonnement.
+                        </p>
+                        <p>
+                        En cas de rejet d’un paiement, l’abonnement est suspendu jusqu’à régularisation de la situation. L’Utilisateur sera immédiatement informé de la suspension de son abonnement.
+                        Les échanges (confirmations d’abonnement et de paiement, informations sur les offres et le service) se feront par courrier électronique à l’adresse indiquée par l’abonné.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h2 class="">7. Garanties – responsabilité limitée</h2>
+                    <div class="flex flex-col gap-3">
+                        <p> La responsabilité de Chrologia ne pourra être engagée qu’à la condition qu’elle ait manqué à l’une de ses obligations, causant un préjudice direct et certain à l’Utilisateur.
+                            La responsabilité de Chrologia pour inexécution ou mauvaise exécution de ses obligations ne pourra être retenue si cette inexécution / mauvaise exécution est imputable, soit à l’Utilisateur, 
+                            soit au fait imprévisible et insurmontable d’un tiers au contrat, soit à un cas de force majeure.
+                        </p>
+                        <p> Chrologia ne saurait être tenue pour responsable de l’inexécution du contrat conclu, 
+                            de force majeure telle que définie par la jurisprudence française, de dysfonctionnement, 
+                            perturbation ou grève totale ou partielle et/ou de télécommunications.
+                        </p>
+                        <p>  Chrologia intervient en tant qu’éditeur de contenu, non en qualité de fournisseur d’accès à Internet.
+                            A ce titre, elle ne peut garantir ni la qualité de la connexion Internet, ni l’absence d’interruptions propres au réseau.
+                        </p>
+                        <p>Les informations proposées sur le site sont conformes à la législation française en vigueur. La responsabilité de ne saurait être
+                            engagée en cas de non-respect de la législation d’un autre pays à partir duquel les produits et services sont achetés.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h2 class="">8. Confidentialité</h2>
+                    <div class="flex flex-col gap-3">
+                        <p class=""> 
+                            Chrologia met en œuvre tous les moyens pour assurer la confidentialité et la sécurité des données transmises sur Internet.
+                            À ce titre, le site Internet utilise un module sécurisé de paiement type SSL (Secure Socket Layer).
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h2 class="">9. Données personnelles</h2>
+                    <div class="flex flex-col gap-3">
+                        <p class=""> 
+                            Chrologia demande à tout Utilisateur de communiquer un certain nombre d’informations personnelles 
+                            appelées « données personnelles » : nom, prénom, adresse électronique,, etc. afin d’être en mesure de l’identifier, de 
+                            le faire bénéficier des services auxquels il est abonné ou de lui proposer des services personnalisés.
+                        </p>
+                        <p class=""> 
+                            Chrologia ne conserve les données personnelles de ses Utilisateurs qu’à des fins historiques, statistiques ou de gestion des 
+                            réclamations et pour une durée maximale de 3 ans à compter de la fin de l’abonnement avant qu’elles ne soient détruites. 
+                            Ces données feront l’objet d’un traitement automatisé.
+                        </p>
+                        <p class=""> 
+                            Conformément à la loi du 6 janvier 1978 modifiée, l’Utilisateur dispose d’un droit d’accès, d’opposition et de rectification
+                            des données le concernant, soit directement sur Internet, soit par courrier en écrivant à Chrologia et par Email à <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                            chrologiapro@gmail.com
+                            </a>
+                        </p>
+                        <p class=""> 
+                            Afin d’améliorer et de personnaliser le site, Chrologia fait usage de cookies. L’acceptation des cookies par l’Utilisateur est indispensable pour tout achat sur le Site.
+                        </p>
+                        <div class="flex flex-col gap-6">
+                    <h2 class="">10.Droit applicable et différends</h2>
+                    <div class="flex flex-col gap-3">
+                        <p class="">
+                            Les présentes CGV sont soumises à la loi française. En cas de litige, les tribunaux français sont seuls compétents.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h2 class="">11. Service clientèle</h2>
+                    <div class="flex flex-col gap-3">
+                        <p>Pour toute information, question ou conseil, ou réclamation relative à un abonnement,
+                             le service clientèle de Chrologia peut être contacté :
+                        </p>
+                        <ul class="list-disc pl-6">
+                            <li>par E-mail : <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                            chrologiapro@gmail.com
+                            </a></li>
+                            
+                        </ul>
+                        
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
