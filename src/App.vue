@@ -7,8 +7,8 @@ import { onErrorCaptured, computed } from 'vue';
 
 // Pour cacher le footer et header si besoin
 const routeActuelle = useRoute()
-const showOnRoutes = ['/weekly', '/reminder', '/notifications', '/rechercher', '/profil', '/parametres'];
-const show = computed(() => showOnRoutes.some(path => routeActuelle.path.startsWith(path)));
+/* const showOnRoutes = ['/weekly', '/reminder', '/notifications', '/rechercher', '/profil', '/parametres']; */
+const show = computed(() => routeActuelle.path === '/weekly' || routeActuelle.path === '/reminder' || routeActuelle.path === '/notifications' || routeActuelle.path === '/rechercher' || routeActuelle.path === '/profil' || routeActuelle.path === '/parametres' );
 </script>
 
 
