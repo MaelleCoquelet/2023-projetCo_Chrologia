@@ -13,12 +13,12 @@ import IconSearch from '@/components/icons/IconSearch.vue';
             <ul class=" bg-slate-900 flex px-8 py-2 justify-between">
 
                 <li>
-                    <RouterLink to="/">
+                    <RouterLink to="/weekly">
                         <IconHome />
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">
+                    <RouterLink to="/notifications">
                         <IconNotif />
                     </RouterLink>
                 </li>
@@ -32,12 +32,12 @@ import IconSearch from '@/components/icons/IconSearch.vue';
 
 
                 <li>
-                    <RouterLink to="/">
+                    <RouterLink to="/rechercher">
                         <IconSearch />
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">
+                    <RouterLink to="/profil">
                         <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
                     </RouterLink>
                 </li>
