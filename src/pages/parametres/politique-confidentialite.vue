@@ -19,7 +19,6 @@ import IconCross from '@/components/icons/IconCross.vue';
         </header>
 
         <section class="text-stone-200 flex flex-col gap-6">
-            <h1 class="">Politique de confidentialité</h1>
             <div class="flex flex-col gap-6">
                 <header class="">
                     <div class="flex flex-col gap-3">
