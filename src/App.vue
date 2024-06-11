@@ -14,6 +14,10 @@ const show = computed(() => routeActuelle.path === '/weekly' || routeActuelle.pa
 
 <template>
   <HeaderPage v-if="show" />
-  <RouterView />
+  <RouterView v-slot="{ Component }">
+    <Suspense>
+      <component :is="Component" :key="$route.path" />
+    </Suspense>
+  </RouterView>
   <FooterPage v-if="show" />
 </template>
