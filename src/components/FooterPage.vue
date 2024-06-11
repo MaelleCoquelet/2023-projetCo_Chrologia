@@ -25,7 +25,7 @@ import IconSearch from '@/components/icons/IconSearch.vue';
 
 
                 <li class="bg-orpink-200 p-2 rounded-full -translate-y-8">
-                    <RouterLink to="/">
+                    <RouterLink to="/creer-post">
                         <IconPlus />
                     </RouterLink>
                 </li>
