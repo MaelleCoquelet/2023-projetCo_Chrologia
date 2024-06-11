@@ -17,7 +17,7 @@ import IconCross from '@/components/icons/IconCross.vue';
             <div></div>
         </header>
         <section >
-                    <div class="">
+                    <div class="text-stone-200">
                         <p class="">En vigueur du 24/02/2024 au 24/05/2026.</p>
                         <p class="">Bienvenue sur Chrologia ! Chrologia est un réseau social proposant
                             à ses Utilisateurs de créer des posts et de
@@ -51,8 +51,8 @@ import IconCross from '@/components/icons/IconCross.vue';
                             n’êtes pas d’accord avec une ou plusieurs des dispositions qu’ils contiennent.</p>
                     </div>
                 <div class="">
-                    <h2 class="">1. Définitions et interprétation</h2>
-                    <div class="">
+                    <h2 class="text-stone-200">1. Définitions et interprétation</h2>
+                    <div class="text-stone-200">
                         <p>Dans les présentes CGU, les termes ci-après ont la signification suivante&nbsp;:</p>
                         <ul class="">
                             <li>« Compte Utilisateur » ou « Profil de l’Utilisateur » désignent l’espace spécifique à un
@@ -79,7 +79,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">2. Création de compte Utilisateurs</h2>
                     <h3 class="">2. 1. Informations demandées</h3>
                     <div class="">
@@ -121,7 +121,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             invitons à nous envoyer un message à l'adresse email&nbsp;: chrologiapro@gmail.com.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">3. Description des Services</h2>
                     <div class="">
                         <p>Vous pouvez utiliser les Services sur votre téléphone via le Site Web Chrologia. Les Services
@@ -156,7 +156,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         <p>Vous pouvez choisir de supprimer du Contenu.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">4. Signalement de Contenu illicite ou inapproprié</h2>
                     <div class="">
                         <p>En notre qualité d’hébergeur, nous ne sommes pas soumis à une obligation générale de
@@ -195,7 +195,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         droit de prendre des
                         sanctions envers l’auteur dudit contenu.</p>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">5. Engagements de l’Utilisateur</h2>
                     <div class="">
                         <p>Dans le cadre de l’utilisation du Site Web, vous vous engagez à vous conformer aux
@@ -241,7 +241,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">6. Suppression de Compte</h2>
                     <div class="">
                         <p>Nous nous réservons le droit de suspendre ou supprimer votre Compte Utilisateur sur simple
@@ -256,7 +256,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         <p>Dans une telle hypothèse, vous n’êtes pas autorisé à créer un nouveau Compte Utilisateur.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">7. Propriété intellectuelle</h2>
                     <h3 class="">7. 1. Propriété intellectuelle et intégrité du
                         site web</h3>
@@ -326,7 +326,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">8. Exclusion de garantie et de responsabilité</h2>
                     <div class="">
                         <p>Le site web et ses Services sont fournis « tels quels ». En conséquence nous ne vous offrons
@@ -359,7 +359,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                     </div>
 
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">9. Protection des données personnelles</h2>
                     <div class="">
                         <p class="">Les utilisateurs sont informés que les données à caractère
@@ -371,7 +371,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             sur la Protection des Données (RGPD). Pour obtenir davantage de détails concernant
                             l'utilisation de vos données à
                             caractère personnel et vos droits les concernant, nous vous recommandons de lire notre <RouterLink
-                                to="/politique-condidentialite" class="">Politique de
+                                to="/politique-condidentialite" class="text-orpink-200">Politique de
                                 confidentialité</RouterLink>.</p>
                         <h3 class="">9. 1. Cession des données à une entreprise
                             tierce</h3>
@@ -405,7 +405,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">10. Modification des Conditions Générales d’Utilisation</h2>
                     <div class="">
                         <p>Chrologia se réserve la faculté de modifier ses CGU à tout moment. Dans ce cas, Chrologia
@@ -415,7 +415,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             l’ouverture du site web.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">11. Divers</h2>
                     <div class="">
                         <p>Dans l’hypothèse où la totalité ou une partie des dispositions des CGU serait considérée
@@ -429,11 +429,11 @@ import IconCross from '@/components/icons/IconCross.vue';
                             Politique de confidentialité, correspondent à la totalité de l’accord entre les Parties.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="text-stone-200">
                     <h2 class="">12. Loi applicable et juridiction compétente</h2>
                     <div class="">
                         <p>Pour toute réclamation ou différend, l’utilisateur est invité en priorité à contacter
-                            Chrologia à <a class="" href="mailto:chrologiapro@gmail.com">
+                            Chrologia à <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
                                 chrologiapro@gmail.com
                             </a>
                             afin de parvenir à une solution amiable.</p>
@@ -444,7 +444,7 @@ import IconCross from '@/components/icons/IconCross.vue';
                             consommateurs et professionnel de l’Union européenne. Cette plateforme est accessible au
                             lien suivant&nbsp;:
                             <a href="https://webgate.ec.europa.eu/odr/"
-                               class="">https://webgate.ec.europa.eu/odr/</a> Les présentes
+                               class="text-orpink-200">https://webgate.ec.europa.eu/odr/</a> Les présentes
                             Conditions sont soumises au droit français.
                             Tout différend non résolu
                             par les voies indiquées ci-dessus sera soumis à la juridiction compétente correspondant au
