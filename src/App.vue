@@ -9,13 +9,11 @@ import { onErrorCaptured, computed } from 'vue';
 const routeActuelle = useRoute()
 const showOnRoutes = ['/weekly', '/reminder', '/notifications', '/rechercher', '/profil', '/parametres'];
 const show = computed(() => showOnRoutes.some(path => routeActuelle.path.startsWith(path)));
-const hideOnRoutes = ['/parametres/a-propos', '/parametres/abonnement', '/parametres/conditions-utilisation', '/parametres/conditions-vente', '/parametres/politique-confidentialite', '/parametres/politique-cookies'];
-const hide = computed(() => !hideOnRoutes.some(path => routeActuelle.path.startsWith(path)));
 </script>
 
 
 <template>
-  <HeaderPage v-if="show, hide" />
+  <HeaderPage v-if="show" />
   <RouterView />
-  <FooterPage v-if="show, hide" />
+  <FooterPage v-if="show" />
 </template>
