@@ -18,11 +18,11 @@ import IconCross from '@/components/icons/IconCross.vue';
             <div></div>
         </header>
 
-        <section class="text-stone-200">
+        <section class="text-stone-200 flex flex-col gap-6">
             <h1 class="">Politique de confidentialité</h1>
-            <div class="">
+            <div class="flex flex-col gap-6">
                 <header class="">
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p class="">Date d'entrée en vigueur :&nbsp;24/02/2024</p>
                         <p class="">Bienvenue sur Chrologia ! Chrologia est un réseau social proposant
                             à
@@ -42,14 +42,14 @@ import IconCross from '@/components/icons/IconCross.vue';
                             transparence quant à la manière dont nous utilisons vos données.</p>
                     </div>
                 </header>
-                <div class="">
+                <div class="flex flex-col gap-6">
                     <h2 class="">1. Collecte de Données</h2>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>En utilisant notre plateforme, vous consentez à la collecte et au traitement de vos
                             informations
                             personnelles telles que
                             détaillées ci-dessous&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Informations de Profil&nbsp;: Nous collectons les informations que vous fournissez lors
                                 de la
                                 création de votre compte,
@@ -78,11 +78,11 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="flex flex-col gap-6">
                     <h2 class="">2. Utilisation des Données</h2>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>Nous utilisons les données collectées pour les finalités suivantes&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Fourniture de Services&nbsp;: Nous utilisons vos informations pour vous offrir une
                                 expérience
                                 personnalisée sur notre
@@ -98,13 +98,13 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="flex flex-col gap-6">
                     <h2 class="">3. Partage des Données</h2>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>Nous ne partageons pas vos informations personnelles identifiables avec des tiers sans votre
                             consentement explicite,
                             sauf dans les cas suivants&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Consentement de l'Utilisateur&nbsp;: Si vous cochez la case “ j'autorise Chrologia à
                                 partager mes données avec des
                                 partenaires dans le cadre de ses activités marketing et commerciales, dans le respect de
@@ -129,14 +129,14 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </ul>
                     </div>
                 </div>
-                <div class="">
+                <div class="flex flex-col gap-6">
                     <h2 class="">4. Vos Choix et Contrôles</h2>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>Vous avez le contrôle sur vos informations personnelles et pouvez choisir de limiter ou de
                             désactiver certaines
                             fonctionnalités de collecte de données dans les paramètres de votre compte. Vous pouvez
                             également&nbsp;:</p>
-                        <ul class="">
+                        <ul class="list-disc pl-6">
                             <li>Nous contacter à tout moment pour demander la suppression ou la mise à jour de vos
                                 données.</li>
                             <li>Savoir avec qui nous partageons vos données.</li>
@@ -153,15 +153,17 @@ import IconCross from '@/components/icons/IconCross.vue';
                             pour l'utilisation de vos
                             données à des fins marketing et commerciales. Vous pouvez exercer ce droit en nous
                             contactant par e-mail à
-                            chrologiapro@gmail.com. Veuillez noter que vos données seront conservées mais non exploitées
+                            <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                                chrologiapro@gmail.com
+                            </a> Veuillez noter que vos données seront conservées mais non exploitées
                             pendant une période
                             maximale de 3 (trois) ans à compter de la date de réception de votre demande de
                             rétractation.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="flex flex-col gap-6">
                     <h2 class="">5. Protection des Enfants</h2>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>Chrologia n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas
                             intentionnellement d'informations
                             personnelles auprès des enfants de moins de 16 ans . Si vous avez moins de 16 ans, veuillez
@@ -174,7 +176,9 @@ import IconCross from '@/components/icons/IconCross.vue';
                             informations personnelles à Chrologia
                             et qui souhaitent que ces informations soient supprimées de nos systèmes sont invités à nous
                             contacter à
-                            chrologiapro@gmail.com. Nous encourageons les parents et tuteurs à surveiller l'utilisation
+                            <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                                chrologiapro@gmail.com
+                            </a> Nous encourageons les parents et tuteurs à surveiller l'utilisation
                             d'Internet de leurs enfants
                             et à les guider lorsqu'ils naviguent en ligne. Chrologia assure avoir pris les mesures pour
                             éviter l’accès à son service
@@ -183,9 +187,9 @@ import IconCross from '@/components/icons/IconCross.vue';
                             obtiendrait un accès à son service par des moyens de détournement.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="flex flex-col gap-6">
                     <h2 class="">6. Sécurité des Données</h2>
-                    <div class="">
+                    <div class="flex flex-col gap-3">
                         <p>Nous prenons des mesures de sécurité techniques et organisationnelles pour protéger vos
                             informations contre tout accès
                             non autorisé, toute divulgation ou toute altération.</p>
@@ -199,7 +203,9 @@ import IconCross from '@/components/icons/IconCross.vue';
                         </p>
                         <p>Pour toute question ou préoccupation concernant notre Politique de Confidentialité, veuillez
                             nous contacter à
-                            chrologiapro@gmail.com.</p>
+                            <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                                chrologiapro@gmail.com
+                            </a></p>
                         <p>Merci d'utiliser Chrologia !</p>
                     </div>
                 </div>

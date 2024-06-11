@@ -105,7 +105,9 @@ import IconCross from '@/components/icons/IconCross.vue';
                             passe de votre Compte
                             Utilisateur. Si vous pensez que quelqu’un utilise votre Compte Utilisateur de façon
                             illégitime vous vous engagez à nous
-                            en avertir en nous contactant à l’adresse chrologiapro@gmail.com.</p>
+                            en avertir en nous contactant à l’adresse <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                                chrologiapro@gmail.com
+                            </a>.</p>
                     </div>
                     <h3 class="">2. 2. Limite d’âge et autorisation parentale
                     </h3>
@@ -118,7 +120,9 @@ import IconCross from '@/components/icons/IconCross.vue';
                             l’autorisation de votre représentant légal.</p>
                         <p>Si vous êtes le représentant légal d'un mineur de moins de 16 ans et que vous souhaitez nous
                             contacter, nous vous
-                            invitons à nous envoyer un message à l'adresse email&nbsp;: chrologiapro@gmail.com.</p>
+                            invitons à nous envoyer un message à l'adresse email&nbsp;: <a class="text-orpink-200" href="mailto:chrologiapro@gmail.com">
+                                chrologiapro@gmail.com
+                            </a></p>
                     </div>
                 </div>
                 <div class="text-stone-200 flex flex-col gap-3">
