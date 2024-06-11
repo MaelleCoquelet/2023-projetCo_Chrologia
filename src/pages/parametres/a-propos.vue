@@ -6,9 +6,11 @@ import Button from '@/components/Button.vue';
 <template>
 
 
-    <main class="px-5 flex flex-col gap-6 py-12 mt-20 mb-20">
+    <main class="px-5 flex flex-col gap-6 py-12">
         <header class="flex items-center justify-between pb-3 border-b border-slate-500">
-            <IconCross />
+            <RouterLink to="/parametres">
+                <IconCross />
+            </RouterLink>
             <h1 class="text-stone-100 text-xl text-center">
                 À propos
             </h1>

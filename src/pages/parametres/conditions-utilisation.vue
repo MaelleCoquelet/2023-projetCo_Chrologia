@@ -4,7 +4,7 @@
 <template>
 
 
-    <main class="px-5 flex flex-col gap-12 py-12 mt-20">
+    <main class="px-5 flex flex-col gap-12 py-12">
         <h1>CONDITIONS UTILISATIONS</h1>
     </main>
 </template>
