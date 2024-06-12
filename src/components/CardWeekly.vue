@@ -12,9 +12,9 @@ import IconFlag from './icons/IconFlag.vue';
 import IconSend from './icons/IconSend.vue';
 import Commentaire from '@/components/Commentaire.vue';
 import ImgPb from './ImgPb.vue';
-
-import { type PostsResponse } from '@/pocketbase-types';
-
+import { oneUtilisateur } from '@/backend';
+import { type PostsResponse, type UsersResponse } from '@/pocketbase-types';
+const oneUserId: UsersResponse<any> = await oneUtilisateur('6nc3c6ptunkazl3')
 const props = defineProps<PostsResponse>()
 const overlayOpen = ref(0)
 </script>
@@ -22,7 +22,7 @@ const overlayOpen = ref(0)
     <article class="flex flex-col gap-6">
         <div class="flex justify-between items-center">
             <RouterLink to="/" class="flex gap-3 items-center">
-                <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
+                <ImgPb :record="props" :filename="oneUserId.photoProfil" :height="32" :width="32" class="rounded-full" />
                 <p>{{ createur }}</p>
             </RouterLink>
             <IconMore @pointerdown="overlayOpen = 1" />
