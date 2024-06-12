@@ -9,8 +9,8 @@ import Pocketbase from 'pocketbase';
 
 const currentUser = ref();
 
-/* const pb = new Pocketbase('http://127.0.0.1:8090');
-const authData = await pb.collection('users').authWithPassword('test@gmail.com', 'password'); */
+const pb = new Pocketbase('http://127.0.0.1:8090');
+const authData = await pb.collection('users').authWithPassword('test@gmail.com', 'password');
 
 
 const doLoginOAuth = async () => {
