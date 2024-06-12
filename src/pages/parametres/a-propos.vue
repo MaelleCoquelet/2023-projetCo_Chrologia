@@ -2,6 +2,26 @@
 import { RouterLink } from 'vue-router';
 import IconCross from '@/components/icons/IconCross.vue';
 import Button from '@/components/Button.vue';
+
+import { ref } from 'vue'
+import { addNewMessage } from '@/backend';
+const form_response = ref({
+    nom_message: '',
+    prenom_message: '',
+    email_message: '',
+    objet_message: '',
+    contenu_message: '',
+})
+
+const sendMessage = async () => {
+    addNewMessage(form_response.value)
+    alert('Votre message a bien été envoyé !')
+}
+
+const refreshPage = () => {
+    window.location.reload()
+}
+
 </script>
 <template>
 
@@ -42,19 +62,19 @@ import Button from '@/components/Button.vue';
                     <h3 class="text-xl text-stone-100 pb-2">Informations Personnelles</h3>
                     <div class="flex flex-col gap-3">
                         <label class="text-stone-100 font-bold text-sm" for="prenom">Prénom *</label>
-                        <input
+                        <input v-model="form_response.prenom_message"
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             id="prenom" type="text" name="prenom" required placeholder="Ex. Toru">
                     </div>
                     <div class="flex flex-col gap-3">
                         <label class="text-stone-100 font-bold text-sm" for="nom">Nom *</label>
-                        <input
+                        <input v-model="form_response.nom_message"
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             id="nom" type="text" name="nom" required placeholder="Ex. Oikawa">
                     </div>
                     <div class="flex flex-col gap-3">
                         <label class="text-stone-100 font-bold text-sm" for="email">Adresse mail *</label>
-                        <input
+                        <input v-model="form_response.email_message"
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             required placeholder="Ex. greatestvillain@gmail.com">
                     </div>
@@ -64,13 +84,13 @@ import Button from '@/components/Button.vue';
 
                     <div class="flex flex-col gap-3">
                         <label class="text-stone-100 font-bold text-sm" for="email">Objet&nbsp;*</label>
-                        <input
+                        <input v-model="form_response.objet_message"
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             placeholder="Problème technique">
                     </div>
                     <div class="flex flex-col gap-3">
                         <label class="text-stone-100 font-bold text-sm" for="email">Message&nbsp;*</label>
-                        <textarea
+                        <textarea v-model="form_response.contenu_message"
                             class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                             placeholder="Écrivez votre message ici"></textarea>
                     </div>
@@ -98,7 +118,8 @@ import Button from '@/components/Button.vue';
                     <div class="">
                         <div class="">
                             <button
-                                class="inline-flex text-center px-4 py-2 bg-orpink-200 text-slate-900 text-sm font-bold uppercase items-center justify-center rounded-md transition duration-300 ease-in-out">Envoyer</button>
+                                class="inline-flex text-center px-4 py-2 bg-orpink-200 text-slate-900 text-sm font-bold uppercase items-center justify-center rounded-md transition duration-300 ease-in-out"
+                                @pointerdown="sendMessage()" @click="refreshPage">Envoyer</button>
                         </div>
                     </div>
                     <div class="">

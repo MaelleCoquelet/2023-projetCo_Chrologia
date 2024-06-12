@@ -25,6 +25,12 @@ export async function loginUser(email: string, password: string) {
     }
   }
 
+//new message
+export async function addNewMessage(newMessage:any) {
+    await pb.collection('messages').create(newMessage);
+}
+
+
 //tous les posts par utilisateurs
 export async function allPostsByUtilisateursId (id:string) {
     const sortedRecordsUtilisateurs = await pb.collection('posts').getFullList ({
