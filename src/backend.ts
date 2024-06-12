@@ -9,6 +9,12 @@ export async function allUtilisateurs() {
     return records ;    
 }
 
+//un utilisateur
+export async function oneUtilisateur(id:string) {
+    const records = await pb.collection('users').getOne(id) ;
+    return records ;    
+}
+
 //tous les posts par utilisateurs
 export async function allPostsByUtilisateursId (id:string) {
     const sortedRecordsUtilisateurs = await pb.collection('posts').getFullList ({
@@ -71,6 +77,15 @@ export async function updateCommentaires(idCommentaires:string, data:any) {
     await pb.collection('commentaires').update(idCommentaires, data) ;
 }
 
+//tous les reminder
+export async function allReminder() {
+    const sortedReminders = await pb.collection('posts').getFullList ({
+        filter:`typePosts ='Reminder' `,
+        expand: 'createur',
+        sort:'created',
+    })
+    return sortedReminders;
+}
 
 //tous les reminder par utilisateurs
 export async function allReminderByUtilisateursId (id:string) {
@@ -79,6 +94,16 @@ export async function allReminderByUtilisateursId (id:string) {
         expand: 'createur',
     })
     return sortedRemindersUtilisateurs;
+}
+
+//tous les weekly
+export async function allWeekly () {
+    const sortedWeeklys = await pb.collection('posts').getFullList ({
+        filter:`typePosts = 'Weekly'`,
+        expand: 'createur',
+        sort:'created',
+    })
+    return sortedWeeklys;
 }
 
 //tous les weekly par utilisateurs
