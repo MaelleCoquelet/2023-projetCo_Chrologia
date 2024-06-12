@@ -3,7 +3,6 @@ import { RouterLink } from 'vue-router';
 import MenuFeed from '@/components/MenuFeed.vue';
 import CardWeekly from '@/components/CardWeekly.vue';
 import CookiesPop from '@/components/CookiesPop.vue';
-
 import { allWeeklyByUtilisateursId, allAmisByUtilisateursId } from '@/backend';
 const weeklyListe = await allWeeklyByUtilisateursId('6nc3c6ptunkazl3')
 
