@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import AddPerson from '@/components/AddPerson.vue';
 import IconSearch from '@/components/icons/IconSearch.vue';
+
+import { allUtilisateurs } from '@/backend';
+const usersListe = await allUtilisateurs()
+
 </script>
 <template>
 
@@ -14,7 +18,7 @@ import IconSearch from '@/components/icons/IconSearch.vue';
         <section class="flex flex-col gap-8">
             <h1 class="text-sm">Suggestions</h1>
             <div class="flex flex-col gap-6">
-                <AddPerson v-for="add in 6" />
+                <AddPerson v-for="user in usersListe" v-bind="user" :key="user.id" />
             </div>
         </section>
     </main>
