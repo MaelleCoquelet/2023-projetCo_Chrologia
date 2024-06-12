@@ -13,6 +13,7 @@ const authData = await pb.collection('users').authWithPassword('test@gmail.com',
  // after the above you can also access the auth data from the authStore
 console.log(pb.authStore.isValid);
 console.log(pb.authStore.token);
+console.log(pb.authStore.model)
 console.log('hello');
 
 // "logout" the last authenticated model
