@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase'
-import { type TypedPocketBase } from './pocketbase-types.js'
+import { type TypedPocketBase, Collections } from './pocketbase-types.js'
 
 export const pb = new PocketBase(import.meta.env.VITE_URL_POCKETBASE) as TypedPocketBase
 
@@ -14,6 +14,16 @@ export async function oneUtilisateur(id:string) {
     const records = await pb.collection('users').getOne(id) ;
     return records ;    
 }
+
+// login
+
+export async function loginUser(email: string, password: string) {
+    {   const authData = await pb.collection("users").authWithPassword(email, password);
+        localStorage.setItem("authToken", authData.token); // Stocker le token
+        localStorage.setItem("userId", authData.record.id); // Stocker l'ID utilisateur correctement
+        return authData;
+    }
+  }
 
 //tous les posts par utilisateurs
 export async function allPostsByUtilisateursId (id:string) {
