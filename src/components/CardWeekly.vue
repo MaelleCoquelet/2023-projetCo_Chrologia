@@ -11,9 +11,11 @@ import IconEye from './icons/IconEye.vue';
 import IconFlag from './icons/IconFlag.vue';
 import IconSend from './icons/IconSend.vue';
 import Commentaire from '@/components/Commentaire.vue';
-import { comment } from 'postcss';
+import ImgPb from './ImgPb.vue';
 
-const activeText = ref(false)
+import { type PostsResponse } from '@/pocketbase-types';
+
+const props = defineProps<PostsResponse>()
 const overlayOpen = ref(0)
 </script>
 <template>
@@ -21,28 +23,23 @@ const overlayOpen = ref(0)
         <div class="flex justify-between items-center">
             <RouterLink to="/" class="flex gap-3 items-center">
                 <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
-                <p>Nom Utilisateur</p>
+                <p>{{ createur }}</p>
             </RouterLink>
             <IconMore @pointerdown="overlayOpen = 1" />
         </div>
-        <img src="" alt=" Photo Ici">
+        <ImgPb :record="props" :filename="imagePost" />
         <div class="flex gap-1">
-            <p class="">Début de la description ici
-                <span class="text-orpink-200 contents" @pointerdown="activeText = !activeText"
-                    :class="{ '!hidden': activeText }">...voir plus</span>
-            </p>
-            <p class="hidden" :class="{ '!contents': activeText }">
-                fin de la description ici.
+            <p class="">{{ textePost }}
             </p>
         </div>
         <ul class="flex justify-center gap-20">
             <li class="flex gap-2 items-center">
                 <IconLike />
-                <p>12</p>
+                <p>{{ favoriNb }}</p>
             </li>
             <li class="flex gap-2 items-center">
                 <IconComment @pointerdown="overlayOpen = 2" />
-                <p>4</p>
+                <p>{{ commentaireNb }}</p>
             </li>
         </ul>
         <section

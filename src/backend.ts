@@ -73,21 +73,27 @@ export async function updateCommentaires(idCommentaires:string, data:any) {
 
 
 //tous les reminder par utilisateurs
-/* export async function allReminderByUtilisateursId (id:string) {
+export async function allReminderByUtilisateursId (id:string) {
     const sortedRemindersUtilisateurs = await pb.collection('posts').getFullList ({
         filter:`createur.id = '${id}' && typePosts ='Reminder' `,
-        filter:`typePosts = 'Reminder' `,
         expand: 'createur',
     })
     return sortedRemindersUtilisateurs;
-} */
+}
 
 //tous les weekly par utilisateurs
-/* export async function allWeeklyByUtilisateursId (id:string) {
+export async function allWeeklyByUtilisateursId (id:string) {
     const sortedWeeklysUtilisateurs = await pb.collection('posts').getFullList ({
         filter:`createur.id = '${id}' && typePosts = 'Weekly' `,
-        filter:`typePosts = 'Weekly' `,
         expand: 'createur',
     })
     return sortedWeeklysUtilisateurs;
-} */
+}
+
+export async function allAmisByUtilisateursId(id:string) {
+    const sortedRecordsAmisUtilisateurs = await pb.collection('users').getFullList({
+        filter: id = '${id}',
+         expand: amiStatut,
+    });
+    return sortedRecordsAmisUtilisateurs;
+}
