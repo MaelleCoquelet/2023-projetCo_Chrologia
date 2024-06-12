@@ -5,7 +5,7 @@ import Button from '@/components/Button.vue';
 import IconCross from '@/components/icons/IconCross.vue';
 import AddPerson from '@/components/AddPerson.vue';
 import { ref } from 'vue';
-const overlayAmisOpen = ref(1)
+const overlayAmisOpen = ref(0)
 </script>
 <template>
     <main class="flex flex-col py-12 mt-20 mb-20">
