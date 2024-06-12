@@ -1,91 +1,67 @@
 <script setup lang="ts">
-import { RouterLink, useRouter } from 'vue-router'
-import Button from '@/components/Button.vue'
-import IconLogo from '@/components/icons/IconLogo.vue'
-import { onMounted, ref } from 'vue'
-import GAuth from 'vue3-google-oauth2'
-import { loginUser } from '@/backend'
-import Pocketbase from 'pocketbase'
+import { RouterLink } from 'vue-router';
+import Button from '@/components/Button.vue';
+import IconLogo from '@/components/icons/IconLogo.vue';
+import { onMounted, ref } from 'vue';
+import GAuth from 'vue3-google-oauth2';
+import Pocketbase from 'pocketbase';
 
+const currentUser = ref();
 
-onMounted(async () => {
-  const pb = new Pocketbase('http://http://127.0.0.1:8090')
+const pb = new Pocketbase('http://127.0.0.1:8090');
+const authData = await pb.collection('users').authWithPassword('test@gmail.com', 'password');
 
-  pb.authStore.onChange(() => {
-    currentUser.value = pb.authStore.model
-  }, true)
-})
-
-const authData = await pb.collection('users').authWithPassword(email.value, password.value)
-
-const doLogin = async () => {
-  const authDataCo = await pb.collection('users').authWithPassword(email.value, password.value)
-  // after the above you can also access the auth data from the authStore
-  console.log(pb.authStore.isValid)
-  console.log(pb.authStore.token)
-  console.log(pb.authStore.model)
-  console.log('hello')
-}
-
-const email = ref('')
-const password = ref('')
-const currentUser = ref()
 
 const doLoginOAuth = async () => {
-  const authData = await pb.collection('users').authWithOAuth2({ provider: 'google' })
-  currentUser.value = pb.authStore.model
-  console.log(currentUser.value)
-}
+  const authData = await pb.collection('users').authWithOAuth2({ provider: 'google' });
+  currentUser.value = pb.authStore.model;
+  console.log(currentUser.value);
+};
+
+
+// after the above you can also access the auth data from the authStore
+console.log(pb.authStore.isValid);
+console.log(pb.authStore.token);
+console.log(pb.authStore.model)
+console.log('hello');
+
+// "logout" the last authenticated model
+pb.authStore.clear();
+
 </script>
 <template>
-  <main class="flex flex-col gap-16 mt-20">
-    <header class="flex flex-col gap-6 justify-center items-center px-8">
-      <IconLogo />
-      <h1 class="text-orpink-200 text-3xl">Connexion</h1>
-      <p class="text-sm">
-        Veuillez vous connecter à Chrologia pour accéder au contenu de notre site
-      </p>
-    </header>
-    <form action="/">
-      <fieldset class="flex flex-col gap-6 px-4">
-        <div class="flex flex-col gap-3">
-          <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail&nbsp;*</label>
-          <input
-            v-model="email"
-            type="text"
-            name="email"
-            id="email"
-            class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
-            required
-            placeholder="Ex. azerty@gmail.com"
-          />
+    <main class="flex flex-col gap-16 mt-20">
+        <header class="flex flex-col gap-6 justify-center items-center px-8">
+            <IconLogo />
+            <h1 class="text-orpink-200 text-3xl">Connexion</h1>
+            <p class="text-sm">Veuillez vous connecter à Chrologia pour accéder au contenu de notre site</p>
+        </header>
+        <form action="/">
+            <fieldset class="flex flex-col gap-6 px-4">
+                <div class="flex flex-col gap-3">
+                    <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail&nbsp;*</label>
+                    <input
+                        class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
+                        required placeholder="Ex. azerty@gmail.com">
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
+                    <input
+                        class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
+                        minlength="8" maxlength="20" required placeholder="Ex. Mot_de_passe">
+                </div>
+            </fieldset>
+        </form>
+        <div class="flex flex-col px-8 gap-6">
+            <div class="flex flex-col gap-3 justify-center items-center">
+                <Button text="se connecter" url="/weekly" />
+                <p>ou</p>
+                <Button @click="doLoginOAuth" text="Connexion Google" url="/weekly"  />
+            </div>
+            <div class="flex gap-2 text-sm font-bold">
+                <p>Vous n'avez pas de compte&nbsp;?</p>
+                <RouterLink to="/inscription" class="text-orpink-200">Inscrivez vous</RouterLink>
+            </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
-          <input
-            v-model="password"
-            type="text"
-            name="password"
-            id="password"
-            class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
-            minlength="8"
-            maxlength="20"
-            required
-            placeholder="Ex. Mot_de_passe"
-          />
-        </div>
-      </fieldset>
-    </form>
-    <div class="flex flex-col px-8 gap-6">
-      <div class="flex flex-col gap-3 justify-center items-center">
-        <Button @click="doLogin" text="se connecter" type="submit" />
-        <p>ou</p>
-        <Button @click="doLoginOAuth" text="Connexion Google" type="submit"/>
-      </div>
-      <div class="flex gap-2 text-sm font-bold">
-        <p>Vous n'avez pas de compte&nbsp;?</p>
-        <RouterLink to="/inscription" class="text-orpink-200">Inscrivez vous</RouterLink>
-      </div>
-    </div>
-  </main>
+    </main>
 </template>

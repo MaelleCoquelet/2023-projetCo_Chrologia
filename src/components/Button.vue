@@ -5,6 +5,7 @@ const props = withDefaults(
     variant?: 'default' | 'dark' | 'disabled'
     size?: 'small' | 'medium'
     text?: string
+    url?: string
   }>(),
   {
     variant: 'default',
@@ -25,10 +26,9 @@ const sizeClass = {
 </script>
 
 <template>
-  <button
+  <RouterLink
     class="inline-flex text-center px-4 py-2 font-bold uppercase items-center justify-center rounded-md transition duration-300 ease-in-out"
-    :class="[variantClass[props.variant], sizeClass[props.size]]"
-  >
+    :class="[variantClass[props.variant], sizeClass[props.size]]" :to="`${url}`">
     {{ text }}
-  </button>
+  </RouterLink>
 </template>
