@@ -2,6 +2,8 @@
 import { RouterLink } from 'vue-router';
 import IconLogo from '@/components/icons/IconLogo.vue';
 import Button from '@/components/Button.vue';
+
+
 </script>
 <template>
     <header

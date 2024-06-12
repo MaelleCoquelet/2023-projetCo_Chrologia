@@ -3,11 +3,21 @@ import { RouterLink } from 'vue-router';
 import Button from '@/components/Button.vue';
 import IconLogo from '@/components/icons/IconLogo.vue';
 import { onMounted, ref } from 'vue';
+import GAuth from 'vue3-google-oauth2';
 
 import Pocketbase from 'pocketbase';
 
-const pb = new Pocketbase('http://127.0.0.1:8090');
-const authData = await pb.collection('users').authWithPassword('test@gmail.com', 'password');
+const currentUser = ref();
+
+/* const pb = new Pocketbase('http://127.0.0.1:8090');
+const authData = await pb.collection('users').authWithPassword('test@gmail.com', 'password'); */
+
+
+const doLoginOAuth = async () => {
+    const authData = await pb.collection('users').authWithOAuth2({ provider: 'google' });
+    currentUser.value = pb.authStore.model;
+    console.log(currentUser.value);
+}; 
 
 
  // after the above you can also access the auth data from the authStore
@@ -47,7 +57,7 @@ pb.authStore.clear();
             <div class="flex flex-col gap-3 justify-center items-center">
                 <Button text="se connecter" url="/weekly" />
                 <p>ou</p>
-                <p>A REMPLACER</p> <!-- A remplacer par le composant de l'api Google -->
+                <Button @click="doLoginOAuth" text="Connexion Google" url="/weekly"  />
             </div>
             <div class="flex gap-2 text-sm font-bold">
                 <p>Vous n'avez pas de compte&nbsp;?</p>
