@@ -13,6 +13,6 @@ console.log(pb.authStore.model)
     <MenuFeed />
     <CookiesPop />
     <main class="flex flex-col gap-12 py-12 mt-44 mb-20 px-5">
-        <CardWeekly v-for="weekly in weeklyListe" v-bind="weekly" :key="weekly.id"/>
+        <CardWeekly v-for="weekly in weeklyListe" v-bind="weekly" :key="weekly.id" />
     </main>
 </template>

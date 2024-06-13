@@ -23,9 +23,9 @@ console.log((props.expand as any).createur)
     <article class="flex flex-col gap-6">
         <div class="flex justify-between items-center">
             <RouterLink to="/" class="flex gap-3 items-center">
-                <ImgPb :record="(props.expand as any).createur" :filename="(props.expand as any).createur.photoProfil" :height="32"
-                    :width="32" class="rounded-full" />
-                <p>{{ createur }}</p>
+                <ImgPb :record="(props.expand as any).createur" :filename="(props.expand as any).createur.photoProfil"
+                    :height="32" :width="32" class="rounded-full" />
+                <p>{{ (props.expand as any).createur.username }}</p>
             </RouterLink>
             <IconMore @pointerdown="overlayOpen = 1" />
         </div>
