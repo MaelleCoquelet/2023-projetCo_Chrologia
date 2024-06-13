@@ -23,9 +23,9 @@ const overlayOpen = ref(0)
     <article class="flex flex-col gap-6">
         <div class="flex justify-between items-center">
             <RouterLink to="/" class="flex gap-3 items-center">
-                <ImgPb :record="(props.expand as any).createur" :filename="(props.expand as any).createur.photoProfil"
-                    :height="32" :width="32" class="rounded-full" />
-                <p>{{createur}}</p>
+                <!-- <ImgPb :record="(props.expand as any).createur" :filename="(props.expand as any).createur.photoProfil"
+                    :height="32" :width="32" class="rounded-full" /> -->
+                <p>Arrive bientôt</p>
             </RouterLink>
             <IconMore @pointerdown="overlayOpen = 1" />
         </div>
