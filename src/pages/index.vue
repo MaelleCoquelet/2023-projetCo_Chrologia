@@ -39,6 +39,7 @@ console.log('hello');
 
 // "logout" the last authenticated model
 pb.authStore.clear();
+console.log(pb.authStore.model)
 
 </script>
 <template>
