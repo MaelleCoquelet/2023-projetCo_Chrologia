@@ -15,6 +15,9 @@ const userWeeklyListe = await allWeeklyByUtilisateursId('6nc3c6ptunkazl3')
 const overlayAmisOpen = ref(0)
 const contentDisplay = ref('weekly')
 
+import { pb } from '@/backend';
+console.log(pb.authStore.model)
+
 </script>
 <template>
     <main class="flex flex-col py-12 mt-20 mb-20">
@@ -27,7 +30,7 @@ const contentDisplay = ref('weekly')
                     class="rounded-full relative top-[40px]" />
                 <Button text="éditer le profil" variant="dark" class="w-fit h-fit translate-y-2" url="#" />
             </div>
-            <p class="px-5 pb-6 font-bold">{{oneUserId.username}}</p>
+            <p class="px-5 pb-6 font-bold">{{pb.authStore.model?.username}}</p>
         </div>
         <div class="flex justify-evenly gap-3 px-5 pb-6">
             <button @pointerdown="overlayAmisOpen = 1"

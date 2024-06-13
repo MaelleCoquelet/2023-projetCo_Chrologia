@@ -5,6 +5,13 @@ import IconHome from '@/components/icons/IconHome.vue';
 import IconNotif from '@/components/icons/IconNotif.vue';
 import IconPlus from '@/components/icons/IconPlus.vue';
 import IconSearch from '@/components/icons/IconSearch.vue';
+import ImgPb from './ImgPb.vue';
+import { type UsersResponse } from '@/pocketbase-types';
+import { allReminderByUtilisateursId, allWeeklyByUtilisateursId, oneUtilisateur } from '@/backend';
+
+import { pb } from '@/backend';
+console.log(pb.authStore.model)
+
 
 </script>
 <template>
@@ -38,7 +45,9 @@ import IconSearch from '@/components/icons/IconSearch.vue';
                 </li>
                 <li>
                     <RouterLink to="/profil">
-                        <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
+                        <ImgPb :record="props" :filename="pb.authStore.model?.photoProfil" :height="32" :width="32"
+                            class="rounded-full" />
+                        <!-- <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil"> -->
                     </RouterLink>
                 </li>
 
