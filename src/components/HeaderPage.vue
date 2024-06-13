@@ -11,7 +11,7 @@ import { useRoute } from 'vue-router'
   <header class="fixed z-10 w-full top-0 py-6 bg-slate-700">
     <nav class="flex justify-between px-[20px] items-center">
       <RouterLink to="/weekly">
-        <IconLogo />
+        <IconLogo class="h-20" />
       </RouterLink>
       <RouterLink to="/parametres">
         <IconSettings :class="{ 'icon-fillActive': $route.path==='/parametres' }" />
