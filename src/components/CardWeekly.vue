@@ -14,21 +14,23 @@ import Commentaire from '@/components/Commentaire.vue';
 import ImgPb from './ImgPb.vue';
 import { oneUtilisateur } from '@/backend';
 import { type PostsResponse, type UsersResponse } from '@/pocketbase-types';
-const oneUserId: UsersResponse<any> = await oneUtilisateur('6nc3c6ptunkazl3')
+/* const oneUserId: UsersResponse<any> = await oneUtilisateur('6nc3c6ptunkazl3') */
 const props = defineProps<PostsResponse>()
 const overlayOpen = ref(0)
+console.log((props.expand as any).createur)
 </script>
 <template>
     <article class="flex flex-col gap-6">
         <div class="flex justify-between items-center">
             <RouterLink to="/" class="flex gap-3 items-center">
-                <ImgPb :record="props" :filename="oneUserId.photoProfil" :height="32" :width="32" class="rounded-full" />
+                <ImgPb :record="(props.expand as any).createur" :filename="(props.expand as any).createur.photoProfil" :height="32"
+                    :width="32" class="rounded-full" />
                 <p>{{ createur }}</p>
             </RouterLink>
             <IconMore @pointerdown="overlayOpen = 1" />
         </div>
         <ImgPb :record="props" :filename="imagePost" />
-        <div class="flex gap-1">
+        <div class="flex gap-1 overflow-auto break-all">
             <p class="">{{ textePost }}
             </p>
         </div>
