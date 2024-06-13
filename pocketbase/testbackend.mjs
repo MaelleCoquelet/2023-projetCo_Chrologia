@@ -12,8 +12,14 @@ import { updatePosts } from "./backend.mjs";
 import { updateCommentaires } from "./backend.mjs";
 import { allReminderByUtilisateursId } from "./backend.mjs";
 import { allWeeklyByUtilisateursId } from "./backend.mjs";
+import { allAmisByUtilisateursId } from "./backend.mjs";
 
-
+try { 
+    const amisUtilisateurs = await allAmisByUtilisateursId('8ylzmsj53ovzxt0');
+    console.log(JSON.stringify(amisUtilisateurs,null,2));
+} catch (e) {
+    console.log(e); 
+}
 
 /*
 //tous les utilisateurs

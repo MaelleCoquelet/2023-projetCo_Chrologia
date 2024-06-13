@@ -133,7 +133,7 @@ export async function allWeeklyByUtilisateursId (id:string) {
 
 export async function allAmisByUtilisateursId(id:string) {
     const sortedRecordsAmisUtilisateurs = await pb.collection('users').getFullList({
-        filter: id = '${id}',
+        filter: `id ='${id}'`,
         expand: 'amiStatut',
     });
     return sortedRecordsAmisUtilisateurs;

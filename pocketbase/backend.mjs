@@ -88,3 +88,11 @@ export async function allWeeklyByUtilisateursId (id) {
     })
     return sortedWeeklysUtilisateurs;
 }
+
+export async function allAmisByUtilisateursId(id) {
+    const sortedRecordsAmisUtilisateurs = await pb.collection('users').getFullList({
+        filter: `id ='${id}'`,
+        expand: 'amiStatut',
+    });
+    return sortedRecordsAmisUtilisateurs;
+}
