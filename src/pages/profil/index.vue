@@ -31,7 +31,7 @@ console.log(pb.authStore.model)
                     class="rounded-full relative top-[40px]" />
                 <Button text="éditer le profil" variant="dark" class="w-fit h-fit translate-y-2" url="#" />
             </div>
-            <p class="px-5 pb-6 font-bold">{{pb.authStore.model?.username}}</p>
+            <p class="px-5 pb-6 font-bold">{{ pb.authStore.model?.username }}</p>
         </div>
         <div class="flex justify-evenly gap-3 px-5 pb-6">
             <button @pointerdown="overlayAmisOpen = 1"
@@ -50,14 +50,16 @@ console.log(pb.authStore.model)
         </div>
         <div class="px-5 flex flex-col gap-12">
             <div class="flex justify-around font-bold">
-                <p class="cursor-pointer" :class="{'text-orpink-200' : contentDisplay ==='reminder'}"
-                    @pointerdown="contentDisplay='reminder'">Reminder</p>
-                <p class="cursor-pointer" :class="{'text-orpink-200' : contentDisplay ==='weekly'}"
-                    @pointerdown="contentDisplay='weekly'">Weekly</p>
+                <p class="cursor-pointer" :class="{ 'text-orpink-200': contentDisplay === 'weekly' }"
+                    @pointerdown="contentDisplay = 'weekly'">Reminder</p>
+                <p class="cursor-pointer" :class="{ 'text-orpink-200': contentDisplay === 'reminder' }"
+                    @pointerdown="contentDisplay = 'reminder'">Weekly</p>
             </div>
-            <CardWeekly class="hidden" :class="{'!flex' : contentDisplay === 'weekly'}"
-                v-for="weekly in userWeeklyListe" v-bind="weekly" :key="weekly.id" :createur="pb.authStore.model?.username" />
-            <CardReminder class="hidden" :class="{'!flex' : contentDisplay === 'reminder'}" v-for="reminder in userReminderListe" />
+            <CardWeekly class="hidden" :class="{ '!flex': contentDisplay === 'weekly' }"
+                v-for="weekly in userWeeklyListe" v-bind="weekly" :key="weekly.id"
+                :createur="pb.authStore.model?.username" />
+            <CardReminder class="hidden" :class="{ '!flex': contentDisplay === 'reminder' }"
+                v-for="reminder in userReminderListe" v-bind="reminder" :key="reminder.id" :createur="pb.authStore.model?.username"/>
         </div>
         <section class="hidden px-5 flex-col gap-12 py-12 top-0 z-20 h-screen fixed w-full bg-slate-700"
             :class="{ '!flex': overlayAmisOpen === 1 }">

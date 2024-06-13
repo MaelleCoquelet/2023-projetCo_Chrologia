@@ -54,7 +54,7 @@ const overlayOpen = ref(0)
                 </p>
             </div>
         </div>
-        <ul class="flex justify-center gap-20">
+        <ul class="hidden justify-center gap-20">
             <li class="flex gap-2 items-center">
                 <IconLike />
                 <p>{{ favoriNb }}</p>
