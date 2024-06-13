@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 import IconCross from '@/components/icons/IconCross.vue';
 import Button from '@/components/Button.vue';
 
@@ -13,9 +13,12 @@ const form_response = ref({
     contenu_message: '',
 })
 
+const router = useRouter()
+
 const sendMessage = async () => {
     addNewMessage(form_response.value)
     alert('Votre message a bien été envoyé !')
+    router.replace('/parametres')
 }
 
 const refreshPage = () => {

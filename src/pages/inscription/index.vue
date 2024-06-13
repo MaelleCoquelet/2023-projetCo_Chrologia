@@ -1,7 +1,38 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 import IconLogo from '@/components/icons/IconLogo.vue';
 import Button from '@/components/Button.vue';
+
+import { ref } from 'vue'
+import { addNewUsers } from '@/backend';
+const user_response = ref({
+    username: '',
+    nom: '',
+    prenom: '',
+    dateDeNaissance:'',
+    email:'',
+    telephone: '',
+    photoProfil: '',
+    nbLikeTotal: 0,
+    biographie: '',
+    amiStatut:'',
+    bannerUtilisateur:'',
+    cookies: false,
+    chrologiaPlus:false,
+    dataUtilsation:false,
+    nbPosts:0,
+    password:'',
+    passwordConfirm:'',
+})
+
+const router = useRouter()
+
+const sendUser = async () => {
+    console.log("USERRESPONSR",user_response)
+    addNewUsers(user_response.value)
+    alert('Votre message a bien été envoyé !')
+    router.replace('/')
+}
 
 
 </script>
@@ -21,19 +52,19 @@ import Button from '@/components/Button.vue';
                 <h2 class="text-xl text-orpink-200 pb-2">Informations Personnelles</h2>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="prenom">Prénom&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.prenom"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="prenom" type="text" name="prenom" required placeholder="Ex. Shoyo">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="nom">Nom&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.nom"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="nom" type="text" name="nom" required placeholder="Ex. Hinata">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="date">Date de Naissance&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.dateDeNaissance"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="dateDeNaissance" type="date" name="dateDeNaissance" required>
                 </div>
@@ -42,42 +73,35 @@ import Button from '@/components/Button.vue';
                 <h2 class="text-xl text-orpink-200">Contact</h2>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.email"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="email" type="email" name="email" required placeholder="Ex. azerty@gmail.com">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="email">Téléphone&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.telephone"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="telephone" type="tel" name="telephone" placeholder="Ex. 08 20 20 20 20">
-                </div>
-                <div class="flex flex-col gap-3">
-                    <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
-                    <input
-                        class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
-                        id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
-                        placeholder="Ex. Mot_de_passe">
                 </div>
             </fieldset>
             <fieldset class="flex flex-col gap-6">
                 <h2 class="text-xl text-orpink-200">Compte</h2>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="prenom">Nom d'utilisateur&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.username"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="pseudo" type="text" name="pseudo" required placeholder="Ex. HighFly">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.password"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
                         placeholder="Ex. Mot_de_passe">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="mdp">Confirmation mot de passe&nbsp;*</label>
-                    <input
+                    <input v-model="user_response.passwordConfirm"
                         class="text-sm text-stone-100 placeholder:text-stone-100 border-slate-500 border-2 rounded-md bg-transparent px-3.5 py-3"
                         id="mdp" type="password" name="mdp" minlength="8" maxlength="20" required
                         placeholder="Ex. Mot_de_passe">
@@ -104,7 +128,7 @@ import Button from '@/components/Button.vue';
                 </div>
                 <div class="">
                     <div class="">
-                        <Button url="/" text="s'inscrire" />
+                        <Button url="#" @pointerdown="sendUser()" text="s'inscrire" />
                     </div>
                 </div>
                 <div class="">
