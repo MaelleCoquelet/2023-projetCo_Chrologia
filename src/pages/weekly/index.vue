@@ -6,6 +6,9 @@ import CookiesPop from '@/components/CookiesPop.vue';
 import { allWeeklyByUtilisateursId, allAmisByUtilisateursId } from '@/backend';
 const weeklyListe = await allWeeklyByUtilisateursId('6nc3c6ptunkazl3')
 
+import { pb } from '@/backend';
+console.log(pb.authStore.model)
+
 </script>
 <template>
     <MenuFeed />
