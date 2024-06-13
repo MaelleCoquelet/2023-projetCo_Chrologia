@@ -50,10 +50,10 @@ console.log(pb.authStore.model)
         </div>
         <div class="px-5 flex flex-col gap-12">
             <div class="flex justify-around font-bold">
-                <p class="cursor-pointer" :class="{'text-orpink-200' : contentDisplay ==='weekly'}"
-                    @pointerdown="contentDisplay='weekly'">Reminder</p>
                 <p class="cursor-pointer" :class="{'text-orpink-200' : contentDisplay ==='reminder'}"
-                    @pointerdown="contentDisplay='reminder'">Weekly</p>
+                    @pointerdown="contentDisplay='reminder'">Reminder</p>
+                <p class="cursor-pointer" :class="{'text-orpink-200' : contentDisplay ==='weekly'}"
+                    @pointerdown="contentDisplay='weekly'">Weekly</p>
             </div>
             <CardWeekly class="hidden" :class="{'!flex' : contentDisplay === 'weekly'}"
                 v-for="weekly in userWeeklyListe" v-bind="weekly" :key="weekly.id" :createur="pb.authStore.model?.username" />
