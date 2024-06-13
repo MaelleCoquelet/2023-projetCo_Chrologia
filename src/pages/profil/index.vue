@@ -10,7 +10,7 @@ import { type UsersResponse } from '@/pocketbase-types';
 import { allReminderByUtilisateursId, allWeeklyByUtilisateursId, oneUtilisateur, allAmisByUtilisateursId } from '@/backend';
 import CardReminder from '@/components/CardReminder.vue';
 
-const oneUserId: UsersResponse<any> = await oneUtilisateur('6nc3c6ptunkazl3')
+/* const oneUserId: UsersResponse<any> = await oneUtilisateur(pb.authStore.model?.id) */
 const userWeeklyListe = await allWeeklyByUtilisateursId(pb.authStore.model?.id)
 const userReminderListe = await allReminderByUtilisateursId(pb.authStore.model?.id)
 const overlayAmisOpen = ref(0)
@@ -28,14 +28,15 @@ console.log(pb.authStore.model)
     <main class="flex flex-col py-12 mt-20 mb-20">
         <div>
             <img class="h-[116px] w-full object-cover" src="/src/assets/img/palicoMHW.webp" alt="Bannière de profil">
-            <div class="flex justify-between px-5">
+            <div class="flex justify-end px-5">
                 <!-- <img class="rounded-full h-20 relative top-[-40px]" src="/src/assets/img/palicoMHW.webp"
                     alt="Photo de profil"> -->
-                <ImgPb :height="20" :width="20" :record="props" :filename="pb.authStore.model?.photoProfil"
-                    class="rounded-full relative top-[40px]" />
+                <!-- <ImgPb :height="20" :width="20" :record="props" :filename="oneUserId.photoProfil"
+                    class="rounded-full relative top-[40px]" /> -->
                 <Button text="éditer le profil" variant="dark" class="w-fit h-fit translate-y-2" url="#" />
             </div>
-            <p class="px-5 pb-6 font-bold">{{ pb.authStore.model?.username }}</p>
+            <p class="px-5 pb-3 font-bold">{{ pb.authStore.model?.username }}</p>
+            <p class="px-5 pb-6">{{ pb.authStore.model?.biographie }}</p>
         </div>
         <div class="flex justify-evenly gap-3 px-5 pb-6">
             <button @pointerdown="overlayAmisOpen = 1"
@@ -55,15 +56,16 @@ console.log(pb.authStore.model)
         <div class="px-5 flex flex-col gap-12">
             <div class="flex justify-around font-bold">
                 <p class="cursor-pointer" :class="{ 'text-orpink-200': contentDisplay === 'weekly' }"
-                    @pointerdown="contentDisplay = 'weekly'">Reminder</p>
+                    @pointerdown="contentDisplay = 'weekly'">Weekly</p>
                 <p class="cursor-pointer" :class="{ 'text-orpink-200': contentDisplay === 'reminder' }"
-                    @pointerdown="contentDisplay = 'reminder'">Weekly</p>
+                    @pointerdown="contentDisplay = 'reminder'">Reminder</p>
             </div>
             <CardWeekly class="hidden" :class="{ '!flex': contentDisplay === 'weekly' }"
                 v-for="weekly in userWeeklyListe" v-bind="weekly" :key="weekly.id"
                 :createur="pb.authStore.model?.username" />
             <CardReminder class="hidden" :class="{ '!flex': contentDisplay === 'reminder' }"
-                v-for="reminder in userReminderListe" v-bind="reminder" :key="reminder.id" :createur="pb.authStore.model?.username"/>
+                v-for="reminder in userReminderListe" v-bind="reminder" :key="reminder.id"
+                :createur="pb.authStore.model?.username" />
         </div>
         <section class="hidden px-5 flex-col gap-12 py-12 top-0 z-20 h-screen fixed w-full bg-slate-700"
             :class="{ '!flex': overlayAmisOpen === 1 }">

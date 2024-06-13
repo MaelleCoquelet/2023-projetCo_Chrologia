@@ -23,7 +23,8 @@ const overlayOpen = ref(0)
     <article class="flex flex-col gap-6">
         <div class="flex justify-between items-center">
             <RouterLink to="/" class="flex gap-3 items-center">
-                <img class="rounded-full h-8" src="/src/assets/img/palicoMHW.webp" alt="Photo de profil">
+                <ImgPb :record="(props.expand as any).createur" :filename="(props.expand as any).createur.photoProfil"
+                    :height="32" :width="32" class="rounded-full" />
                 <p>{{createur}}</p>
             </RouterLink>
             <IconMore @pointerdown="overlayOpen = 1" />
@@ -35,10 +36,16 @@ const overlayOpen = ref(0)
             </div>
         </div>
         <div class="flex justify-center py-6 relative overflow-hidden">
-            <div class="h-20 w-20 rounded-full absolute bg-pink-300 bg-opacity-35 blur-[32px] -top-10 left-0 -z-10 animate-pulse"></div>
-            <div class="h-28 w-28 rounded-full absolute bg-sky-200 bg-opacity-35 blur-[32px] -bottom-10 left-5 -z-10"></div>
-            <div class="h-28 w-28 rounded-full absolute bg-amber-50 bg-opacity-35 blur-[32px] -top-10 -right-10 -z-10"></div>
-            <div class="h-20 w-20 rounded-full absolute bg-orpink-200 bg-opacity-35 blur-[32px] -bottom-10 right-10 -z-10 animate-pulse"></div>
+            <div
+                class="h-20 w-20 rounded-full absolute bg-pink-300 bg-opacity-35 blur-[32px] -top-10 left-0 -z-10 animate-pulse">
+            </div>
+            <div class="h-28 w-28 rounded-full absolute bg-sky-200 bg-opacity-35 blur-[32px] -bottom-10 left-5 -z-10">
+            </div>
+            <div class="h-28 w-28 rounded-full absolute bg-amber-50 bg-opacity-35 blur-[32px] -top-10 -right-10 -z-10">
+            </div>
+            <div
+                class="h-20 w-20 rounded-full absolute bg-orpink-200 bg-opacity-35 blur-[32px] -bottom-10 right-10 -z-10 animate-pulse">
+            </div>
             <div class="flex items-center gap-6 bg-slate-900 p-3 rounded-[5px]">
                 <p class="flex flex-col items-center gap-2"><span
                         class="font-serif text-3xl font-semibold px-2 py-4 rounded-[5px] bg-gradient-to-b from-slate-700 to-slate-600 relative"><span
