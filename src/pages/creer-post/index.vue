@@ -6,7 +6,28 @@ import IconReminder from '@/components/icons/IconReminder.vue';
 import Button from '@/components/Button.vue';
 import { ref } from 'vue';
 
-const postTypeSelected = ref(1)
+
+const postTypeSelected = ref('Weekly')
+import { addNewPosts, commentairesPosts, pb } from '@/backend';
+import { PostsTypePostsOptions } from '@/pocketbase-types';
+console.log(pb.authStore.model)
+
+const post_response = ref({
+    imagePost: '',
+    textePost: '',
+    favoriNb: 0,
+    commentaireNb: 0,
+    hiddenPost: false,
+    createur: pb.authStore.model?.id,
+    statutLike: 0,
+    typePosts: postTypeSelected,
+    datePost: '',
+})
+
+const sendPost = async () => {
+    addNewPosts(post_response.value)
+    alert('Votre message a bien été envoyé !')
+}
 
 </script>
 <template>
@@ -30,17 +51,18 @@ const postTypeSelected = ref(1)
                 <h2 class="text-stone-100 text-sm font-normal">Créez votre reminder ou votre weekly !</h2>
                 <ul class="flex justify-around">
                     <li>
-                        <button class="menuFeed-items" @pointerdown="postTypeSelected = 1">
-                            <IconWeekly :class="{ '*:fill-orpink-200 *:stroke-orpink-200': postTypeSelected === 1 }" />
-                            <p class="text-sm" :class="{ 'text-orpink-200 font-bold': postTypeSelected === 1 }">
+                        <button class="menuFeed-items" @pointerdown="postTypeSelected = 'Weekly'">
+                            <IconWeekly
+                                :class="{ '*:fill-orpink-200 *:stroke-orpink-200': postTypeSelected === 'Weekly' }" />
+                            <p class="text-sm" :class="{ 'text-orpink-200 font-bold': postTypeSelected === 'Weekly' }">
                                 Weekly</p>
                         </button>
                     </li>
                     <li>
-                        <button to="/reminder" class="menuFeed-items" @pointerdown="postTypeSelected = 2">
-                            <IconReminder :class="{ '*:fill-orpink-200': postTypeSelected === 2 }" />
+                        <button to="/reminder" class="menuFeed-items" @pointerdown="postTypeSelected = 'Reminder'">
+                            <IconReminder :class="{ '*:fill-orpink-200': postTypeSelected === 'Reminder' }" />
                             <p class="text-sm text-stone-100"
-                                :class="{ '!text-orpink-200 font-bold': postTypeSelected === 2 }">Reminder
+                                :class="{ '!text-orpink-200 font-bold': postTypeSelected === 'Reminder' }">Reminder
                             </p>
                         </button>
                     </li>
