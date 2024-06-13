@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import IconArrow from '@/components/icons/IconArrow.vue';
+import Button from '@/components/Button.vue';
+import { pb } from '@/backend';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const doLogout = async () => {
+    pb.authStore.clear();
+    console.log(pb.authStore.model)
+    router.replace('/')
+}
 </script>
 <template>
 
@@ -37,5 +48,6 @@ import IconArrow from '@/components/icons/IconArrow.vue';
                 </li>
             </ul>
         </nav>
+        <Button text="Se Déconnecter" @click="doLogout()" url="#" />
     </main>
 </template>
