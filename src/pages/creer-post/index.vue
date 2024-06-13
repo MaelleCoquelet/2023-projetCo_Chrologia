@@ -4,13 +4,28 @@ import IconCross from '@/components/icons/IconCross.vue';
 import IconWeekly from '@/components/icons/IconWeekly.vue';
 import IconReminder from '@/components/icons/IconReminder.vue';
 import Button from '@/components/Button.vue';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
+import { useRouter } from 'vue-router';
+const router = useRouter()
 
 const postTypeSelected = ref('Weekly')
 import { addNewPosts, commentairesPosts, pb } from '@/backend';
 import { PostsTypePostsOptions } from '@/pocketbase-types';
 console.log(pb.authStore.model)
+
+/* const imageForPb = ref();
+const imagePreview = ref<HTMLInputElement | null>(null);
+const imageFichier = ref<File | null>(null);
+const imageUrl = computed(() => imageFichier.value ? URL.createObjectURL(imageFichier.value) : '')
+
+function ajoutImage(e: any) {
+    if (e.target) { imageForPb.value = e.target.files[0] }
+    imagePreview.value = e.target as HTMLInputElement;
+    if (imagePreview.value.files && imagePreview.value.files.length > 0) {
+        imageFichier.value = imagePreview.value.files[0]
+    }
+} */
 
 const post_response = ref({
     imagePost: '',
@@ -27,7 +42,10 @@ const post_response = ref({
 const sendPost = async () => {
     addNewPosts(post_response.value)
     alert('Votre message a bien été envoyé !')
+    router.replace('/profil')
 }
+
+
 
 </script>
 <template>
@@ -69,12 +87,12 @@ const sendPost = async () => {
                 </ul>
             </div>
             <textarea class="text-sm text-stone-100 placeholder:text-stone-100 bg-transparent w-full h-fit py-8"
-                placeholder="Écrivez votre post..."></textarea>
+                placeholder="Écrivez votre post..." v-model="post_response.textePost"></textarea>
             <div class="flex justify-between items-center">
-                <button>
+                <div>
                     <IconImage />
-                </button>
-                <Button text="poster" url="/weekly" />
+                </div>
+                <Button @pointerdown="sendPost()" text="poster" url="/weekly" />
             </div>
         </section>
     </main>
