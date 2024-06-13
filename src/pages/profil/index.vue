@@ -7,7 +7,7 @@ import AddPerson from '@/components/AddPerson.vue';
 import ImgPb from '@/components/ImgPb.vue';
 import { ref } from 'vue';
 import { type UsersResponse } from '@/pocketbase-types';
-import { allReminderByUtilisateursId, allWeeklyByUtilisateursId, oneUtilisateur } from '@/backend';
+import { allReminderByUtilisateursId, allWeeklyByUtilisateursId, oneUtilisateur, allAmisByUtilisateursId } from '@/backend';
 import CardReminder from '@/components/CardReminder.vue';
 
 const oneUserId: UsersResponse<any> = await oneUtilisateur('6nc3c6ptunkazl3')
@@ -15,6 +15,8 @@ const userWeeklyListe = await allWeeklyByUtilisateursId(pb.authStore.model?.id)
 const userReminderListe = await allReminderByUtilisateursId(pb.authStore.model?.id)
 const overlayAmisOpen = ref(0)
 const contentDisplay = ref('weekly')
+
+const amisListe = await allAmisByUtilisateursId(pb.authStore.model?.id)
 
 import { pb } from '@/backend';
 console.log(pb.authStore.model)
@@ -71,7 +73,7 @@ console.log(pb.authStore.model)
                 <div></div>
             </header>
             <div class="flex flex-col gap-6">
-                <AddPerson v-for="notif in 7" />
+                <AddPerson v-for="ami in amisListe" v-bind="ami" :key="ami.id" />
             </div>
         </section>
     </main>
