@@ -54,13 +54,13 @@ console.log(pb.authStore.model)
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="email">Adresse mail&nbsp;*</label>
                     <input v-model="login_data.email"
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
+                        class="text-sm placeholder:text-stone-100 text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
                         required placeholder="Ex. azerty@gmail.com">
                 </div>
                 <div class="flex flex-col gap-3">
                     <label class="text-stone-100 font-bold text-xl" for="mdp">Mot de passe&nbsp;*</label>
-                    <input v-model="login_data.password"
-                        class="text-sm placeholder:text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
+                    <input v-model="login_data.password" type="password"
+                        class="text-sm placeholder:text-stone-100 text-stone-100 border-slate-500 border-4 rounded-md bg-transparent px-3.5 py-3"
                         minlength="8" maxlength="20" required placeholder="Ex. Mot_de_passe">
                 </div>
             </fieldset>
