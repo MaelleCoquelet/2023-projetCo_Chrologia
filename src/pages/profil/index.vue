@@ -16,6 +16,8 @@ const userReminderListe = await allReminderByUtilisateursId(pb.authStore.model?.
 const overlayAmisOpen = ref(0)
 const contentDisplay = ref('weekly')
 
+console.log("userweekly",userWeeklyListe)
+
 const amisListe = await allAmisByUtilisateursId(pb.authStore.model?.id)
 
 import { pb } from '@/backend';

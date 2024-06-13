@@ -125,7 +125,7 @@ export async function allWeekly () {
 //tous les weekly par utilisateurs
 export async function allWeeklyByUtilisateursId (id:string) {
     const sortedWeeklysUtilisateurs = await pb.collection('posts').getFullList ({
-        filter:`createur.id = '${id}' && typePosts = 'Weekly' `,
+        filter:`createur = '${id}' && typePosts = 'Weekly' `,
         expand: 'createur',
     })
     return sortedWeeklysUtilisateurs;
