@@ -5,3 +5,5 @@
 Groupe : Anis Amrouche
 Viktor Ghirardelli
 Maëlle Coquelet
+Utilisateur test : user@gmail.com
+Mot de passe : useruser
